@@ -1,0 +1,273 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50debug35.12.dtd" >
+   <PATCH nodename="C:\Users\joreg\Documents\repos\vl-others\VL.Devices.DigiCamControl\vvvv\girlpower\DIgiCamDemo.v4p" systemname="DIgiCamDemo" filename="C:\Users\H\Documents\Praxis\Github\vlstuff\VL.Devices.DigiCamControl\vvvv\girlpower\DIgiCamDemo.v4p" locked="0" scrollx="15" scrolly="0">
+   <BOUNDS type="Window" left="0" top="5760" width="8625" height="6945">
+   </BOUNDS>
+   <NODE systemname="RENDERER (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="8">
+   <BOUNDS type="Node" left="1140" top="5505" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1140" top="5505" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="0" width="6510" height="5670">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Live View|">
+   </PIN>
+   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="98" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4200" top="2100" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4200" top="2100" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Connected">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="101" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="18855" top="30" width="2640" height="900">
+   </BOUNDS>
+   <BOUNDS type="Box" left="18855" top="30" width="2655" height="1410">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|- try with multiple cameras&cr;&lf;- get the events running&cr;&lf;- close/open session&cr;&lf;- cameras enum&cr;&lf;- make enums for params&cr;&lf;- Events on property change???|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="PerfMeter (Debug)" filename="%VVVV%\lib\nodes\modules\Debug\PerfMeter (Debug).v4p" nodename="PerfMeter (Debug)" componentmode="Hidden" id="117">
+   <BOUNDS type="Node" left="2625" top="4440" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="Group (EX9)" id="118" systemname="Group (EX9)">
+   <BOUNDS type="Node" left="1155" top="5070" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1155" top="5070" width="2400" height="1800">
+   </BOUNDS>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="117" srcpinname="Layer" dstnodeid="118" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="118" srcpinname="Layer" dstnodeid="8" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="FullscreenQuad (DX9)" nodename="FullscreenQuad (DX9)" componentmode="Hidden" id="7" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\FullscreenQuad (DX9).v4p">
+   <BOUNDS type="Node" left="1140" top="4440" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="118" dstpinname="Layer 1">
+   </LINK>
+   <NODE id="99" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1860" top="2085" width="2250" height="510">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1860" top="2085" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="|Canon EOS 550D ()|">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Devices">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE id="276" systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="4770" top="3450" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="275" systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="5025" top="3015" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filter" slicecount="1" values=".jpg">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input Index" visible="1">
+   </PIN>
+   <PIN pinname="Comparison" slicecount="1" values="Contains">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="275" srcpinname="Input Index" dstnodeid="276" dstpinname="Index">
+   </LINK>
+   <NODE systemname="RENDERER (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="283">
+   <BOUNDS type="Node" left="4770" top="5460" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4770" top="5460" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="6315" top="0" width="6510" height="5670">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Capture Preview|">
+   </PIN>
+   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="Group (EX9)" id="282" systemname="Group (EX9)">
+   <BOUNDS type="Node" left="4785" top="5025" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4785" top="5025" width="2400" height="1800">
+   </BOUNDS>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="282" srcpinname="Layer" dstnodeid="283" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="FullscreenQuad (DX9)" nodename="FullscreenQuad (DX9)" componentmode="Hidden" id="280" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\FullscreenQuad (DX9).v4p">
+   <BOUNDS type="Node" left="4770" top="4395" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="280" srcpinname="Layer" dstnodeid="282" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="FileTexture (EX9.Texture)" filename="" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="281">
+   <BOUNDS type="Node" left="4770" top="3960" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4770" top="3960" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Data" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Filename" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="281" srcpinname="Texture Out" dstnodeid="280" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="276" srcpinname="Output" dstnodeid="281" dstpinname="Filename">
+   </LINK>
+   <NODE id="292" systemname="DigiCamDemo (Devices)" filename="C:\Users\joreg\Documents\repos\vvvv\public-vl\VL.Devices.DigiCamControl\vvvv\girlpower\vl\VVVV.Devices.CamDemo.vl" nodename="DigiCam (Devices)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="1140" top="1620" width="3690" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="555" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="0" width="6000" height="4500">
+   </BOUNDS>
+   <PIN pinname="Directory" visible="1">
+   </PIN>
+   <PIN pinname="Result" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="292" srcpinname="Connected" dstnodeid="98" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="292" srcpinname="Display Names" dstnodeid="99" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="292" srcpinname="Captured File Path" dstnodeid="275" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="292" srcpinname="Captured File Path" dstnodeid="276" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="293">
+   <BOUNDS type="Box" left="1140" top="1035" width="1485" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1140" top="1035" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="|Captured Files|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="|All Files (*.*)||*.*|">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Directory">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="293" srcpinname="Output String" dstnodeid="292" dstpinname="Directory">
+   </LINK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="294">
+   <BOUNDS type="Node" left="2700" top="1035" width="2235" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2700" top="1035" width="2235" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt; directory to save photos to|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="295">
+   <BOUNDS type="Node" left="5055" top="1620" width="2520" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5055" top="1620" width="2520" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt; rightclick to open the VL editor|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="UploadImage (EX9.Texture Async)" filename="..\..\..\..\vvvv\public-vl\VL.CoreLib.VVVV\vvvv\nodes\plugins\VL.CoreLib.VVVV.dll" nodename="UploadImage (EX9.Texture Async)" componentmode="Hidden" id="273">
+   <BOUNDS type="Node" left="1140" top="4005" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1140" top="4005" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Data" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="273" srcpinname="Texture Out" dstnodeid="7" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="292" srcpinname="Result" dstnodeid="273" dstpinname="Data">
+   </LINK>
+   </PATCH>

@@ -4,3 +4,9 @@
 
 # Dynamic plugins .dll
 bin/
+obj/
+.vs/
+packages/
+lib/net461/
+appveyor/nuget.exe
+*.nupkg

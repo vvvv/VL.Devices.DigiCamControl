@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VL.Devices.DigiCamControl", "VL.Devices.DigiCamControl.csproj", "{8B436C15-80E8-4406-ADB6-493B8E1CA02C}"
+EndProject
+Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "VL.Devices.DigiCamControl.Package", "..\VL.Devices.DigiCamControl.Package.nuproj", "{D47D2FC4-2A4F-412D-B4EF-BE2D306B51AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B436C15-80E8-4406-ADB6-493B8E1CA02C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B436C15-80E8-4406-ADB6-493B8E1CA02C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B436C15-80E8-4406-ADB6-493B8E1CA02C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B436C15-80E8-4406-ADB6-493B8E1CA02C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D47D2FC4-2A4F-412D-B4EF-BE2D306B51AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D47D2FC4-2A4F-412D-B4EF-BE2D306B51AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D47D2FC4-2A4F-412D-B4EF-BE2D306B51AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D47D2FC4-2A4F-412D-B4EF-BE2D306B51AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
