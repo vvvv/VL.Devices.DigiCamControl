@@ -1,0 +1,552 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PortableDeviceLib</name>
+    </assembly>
+    <members>
+        <member name="T:PortableDeviceLib.ContentType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.ContentType.#ctor(PortableDeviceApiLib.PortableDeviceClass,System.Guid,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:PortableDeviceLib.ContentType"/> class
+            </summary>
+            <param name="portableDeviceClass"></param>
+            <param name="guid"></param>
+            <param name="name"></param>
+        </member>
+        <member name="P:PortableDeviceLib.ContentType.Guid">
+            <summary>
+            Gets or sets the guid of the content type
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.ContentType.Name">
+            <summary>
+            Gets or sets the name of the content type
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.ContentType.SupportedFormats">
+            <summary>
+            Gets or sets the supported format
+            </summary>
+        </member>
+        <member name="T:PortableDeviceLib.PortableDevicePKeys">
+            <summary>
+            Regroup default item from WPD
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDevicePKeys.#cctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PortableDeviceLib.Factories.PortableDeviceEventTypeFactory">
+            <summary>
+            Represent a factory that can construct new <see cref="T:PortableDeviceLib.Model.PortableDeviceEventType"/> object
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.Factories.PortableDeviceEventTypeFactory.Instance">
+            <summary>
+            Gets the unique instance of the <see cref="T:PortableDeviceLib.Factories.PortableDeviceEventTypeFactory"/>
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.Factories.PortableDeviceEventTypeFactory.CreateEventType(System.Guid)">
+            <summary>
+            Create a new instance of the 
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PortableDeviceLib.Factories.PortableDeviceObjectFactory">
+            <summary>
+            Represent a factory that can build <see cref="T:PortableDeviceLib.Model.PortableDeviceObject"/>
+            You can register new method to handle new object types
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.Factories.PortableDeviceObjectFactory.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:PortableDeviceLib.Factories.PortableDeviceObjectFactory"/> class
+            This is a private constructor to support Singleton pattern
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.Factories.PortableDeviceObjectFactory.Instance">
+            <summary>
+            Gets the unique instance of factory
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.Factories.PortableDeviceObjectFactory.RegisterNewFactoryMethod(System.Guid,System.Func{System.String,System.String,System.String,System.String,PortableDeviceLib.Model.PortableDeviceObject})">
+            <summary>
+            Register a new factory method that enable create new object type
+            </summary>
+            <param name="handledType"></param>
+            <param name="method"></param>
+        </member>
+        <member name="M:PortableDeviceLib.Factories.PortableDeviceObjectFactory.CreateInstance(System.Guid,System.String,System.String,System.String,System.String)">
+            <summary>
+            Create a new instance of a portableDeviceObject or derived from type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PortableDeviceLib.FunctionalCategory">
+            <summary>
+            Represent a functional category and supported content type
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.FunctionalCategory.#ctor(PortableDeviceApiLib.PortableDeviceClass,System.Guid,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:PortableDeviceLib.FunctionalCategory"/> class
+            </summary>
+            <param name="portableDeviceClass"></param>
+            <param name="guid"></param>
+            <param name="name"></param>
+        </member>
+        <member name="P:PortableDeviceLib.FunctionalCategory.Guid">
+            <summary>
+            Get the guid of this functional category
+            You can use it with PortableDeviceCabilities
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.FunctionalCategory.Name">
+            <summary>
+            Get the name of this functional category
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.FunctionalCategory.ContentTypes">
+            <summary>
+            Get all content types in this category
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.FunctionalCategory.ToString">
+            <summary>
+            <see cref="M:System.Object.ToString"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PortableDeviceLib.Model.PortableDeviceEventDescription">
+            <summary>
+            Represent a description for an event
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.Model.PortableDeviceEventDescription.#ctor(System.Guid,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:PortableDeviceLib.Model.PortableDeviceEventDescription"/> class
+            </summary>
+            <param name="eventGuid">The event guid key</param>
+            <param name="eventName">The event name</param>
+        </member>
+        <member name="P:PortableDeviceLib.Model.PortableDeviceEventDescription.Guid">
+            <summary>
+            Gets or sets the guid of the event
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.Model.PortableDeviceEventDescription.Name">
+            <summary>
+            Gets or sets the name of the event
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.Model.PortableDeviceEventDescription.Options">
+            <summary>
+            Gets the options of the event
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.Model.PortableDeviceEventDescription.AddOptions(PortableDeviceLib.Model.PortableDeviceEventOption)">
+            <summary>
+            Add an option in the event description
+            </summary>
+            <param name="option"></param>
+        </member>
+        <member name="T:PortableDeviceLib.Model.PortableDeviceEventOption">
+            <summary>
+            Represent an option
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.Model.PortableDeviceEventOption.Guid">
+            <summary>
+            Gets or sets the guid
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.Model.PortableDeviceEventOption.Name">
+            <summary>
+            Gets or sets the name
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.Model.PortableDeviceEventOption.Value">
+            <summary>
+            Gets or sets the value
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.Model.PortableDeviceEventOption.ValueType">
+            <summary>
+            Gets or sets the value type
+            </summary>
+        </member>
+        <member name="T:PortableDeviceLib.Model.PortableDeviceEventType">
+            <summary>
+            Represent the base class for event type
+            </summary>
+        </member>
+        <member name="T:PortableDeviceLib.Model.PortableDeviceFonctionalObject">
+            <summary>
+            Represent a fonctional object
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.Model.PortableDeviceFonctionalObject.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:PortableDeviceLib.Model.PortableDeviceFonctionalObject"/> class
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:PortableDeviceLib.Model.PortableDeviceContainerObject">
+            <summary>
+            Represent an object that can contains other objects
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.Model.PortableDeviceContainerObject.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:PortableDeviceLib.Model.PortableDeviceContainerObject"/> class
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:PortableDeviceLib.Model.PortableDeviceContainerObject.Childs">
+            <summary>
+            Gets the childs of this object
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.Model.PortableDeviceContainerObject.AddChild(PortableDeviceLib.Model.PortableDeviceObject)">
+            <summary>
+            Add a child in collection
+            </summary>
+            <param name="child"></param>
+        </member>
+        <member name="T:PortableDeviceLib.Model.PortableDeviceFolderObject">
+            <summary>
+            Represent a folder
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.Model.PortableDeviceFolderObject.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:PortableDeviceLib.Model.PortableDeviceFolderObject"/>
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:PortableDeviceLib.Model.PortableDeviceObject">
+            <summary>
+            Represent an objet in a WPD
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.Model.PortableDeviceObject.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:PortableDeviceLib.Model.PortableDeviceObject"/> class
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:PortableDeviceLib.Model.PortableDeviceObject.ID">
+            <summary>
+            Gets the ID of the object
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.Model.PortableDeviceObject.Name">
+            <summary>
+            Gets the name of the object
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.Model.PortableDeviceObject.ContentType">
+            <summary>
+            Gets the content type
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.Model.PortableDeviceObject.Format">
+            <summary>
+            Gets the format
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.Model.PortableDeviceObject.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PortableDeviceLib.PortableDevice">
+            <summary>
+            Represent a portable device
+            </summary>
+        </member>
+        <member name="E:PortableDeviceLib.PortableDevice.DeviceEvent">
+            <summary>
+            Event sended when portable device raise an event
+            </summary>
+        </member>
+        <member name="E:PortableDeviceLib.PortableDevice.PropertyChanged">
+            <summary>
+            <see cref="T:System.ComponentModel.INotifyPropertyChanged"/>
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDevice.#ctor(System.String)">
+            <summary>
+            Default constructor
+            </summary>
+            <param name="deviceId"></param>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDevice.DeviceId">
+            <summary>
+            Gets the device ID
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDevice.IsConnected">
+            <summary>
+            Gets a value 
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDevice.FriendlyName">
+            <summary>
+            Gets the Friendly name of the device
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDevice.BatteryLevel">
+            <summary>
+            Gets the battery level of the device
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDevice.Model">
+            <summary>
+            Gets the device model
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDevice.Manufacturer">
+            <summary>
+            Gets the device Manufacturer
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDevice.FirmwareVersion">
+            <summary>
+            Gets the firmware version
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDevice.SerialNumber">
+            <summary>
+            Gets the serial number of device
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDevice.DeviceType">
+            <summary>
+            Gets the device type
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDevice.DeviceCapabilities">
+            <summary>
+            Gets the capabilities of the device
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDevice.Content">
+            <summary>
+            Gets all content from device
+            If return is null be sure you call <see cref="M:PortableDeviceLib.PortableDevice.RefreshContent"/> before
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDevice.ConnectToDevice(System.String,System.Single,System.Single)">
+            <summary>
+            Connect to the portable device
+            </summary>
+            <param name="appName"></param>
+            <param name="majorVersionNumber"></param>
+            <param name="minorVersionNumber"></param>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDevice.Disconnect">
+            <summary>
+            Disconnect from device
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDevice.RefreshContent">
+            <summary>
+            Refresh content from device
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDevice.ExecuteCommand(PortableDeviceApiLib._tagpropertykey)">
+            <summary>
+            Execute the specified command
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDevice.SaveFile(System.String,System.IO.Stream)">
+            <summary>
+            Transfer from device to computer
+            Source : http://cgeers.com/2011/08/13/wpd-transferring-content/
+            </summary>
+            <param name="deviceObject"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDevice.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDevice.Dispose">
+            <summary>
+            Dispose the unmanaged resource
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDevice.RaisePropertyChanged(System.String)">
+            <summary>
+            Raise the <see cref="E:PortableDeviceLib.PortableDevice.PropertyChanged"/> event
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDevice.RaiseEvent(PortableDeviceLib.Model.PortableDeviceEventType)">
+            <summary>
+            Raise event from device
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDevice.Finalize">
+            <summary>
+            Finalizer
+            </summary>
+        </member>
+        <member name="T:PortableDeviceLib.PortableDeviceEventArgs">
+            <summary>
+            Event arguments for the <see cref="!:PortableDevice.DeviceEventSended"/> event
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDeviceEventArgs.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:PortableDeviceLib.PortableDeviceEventArgs"/> class
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDeviceEventArgs.#ctor(PortableDeviceLib.Model.PortableDeviceEventType)">
+            <summary>
+            Initialize a new instance of the <see cref="T:PortableDeviceLib.PortableDeviceEventArgs"/> class
+            </summary>
+            <param name="eventType">The event type</param>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDeviceEventArgs.EventType">
+            <summary>
+            Gets or sets the event guid.
+            </summary>
+        </member>
+        <member name="T:PortableDeviceLib.PortableDeviceEventCallback">
+            <summary>
+            Manage event from device
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDeviceEventCallback.#ctor(PortableDeviceLib.PortableDevice)">
+            <summary>
+            Initialize an new instance of the <see cref="T:PortableDeviceLib.PortableDeviceEventCallback"/> class
+            </summary>
+            <param name="portableDevice"></param>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDeviceEventCallback.OnEvent(PortableDeviceApiLib.IPortableDeviceValues)">
+            <summary>
+            Callback for event from device
+            </summary>
+            <param name="pEventParameters"></param>
+        </member>
+        <member name="T:PortableDeviceLib.PortableDeviceCapabilities">
+            <summary>
+            Represent the device capabilities
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDeviceCapabilities.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDeviceCapabilities.FunctionalCategories">
+            <summary>
+            Gets all functional categories
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDeviceCapabilities.Commands">
+            <summary>
+            Gets commands from devices
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDeviceCapabilities.Events">
+            <summary>
+            Gets supported events
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDeviceCapabilities.ExtractDeviceCapabilities(PortableDeviceApiLib.PortableDeviceClass)">
+            <summary>
+            Extract device capabilities
+            </summary>
+            <param name="portableDeviceClass"></param>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDeviceCapabilities.ExtractCommands(PortableDeviceApiLib.PortableDeviceClass)">
+            <summary>
+            Extract command supported by device
+            </summary>
+            <param name="portableDeviceClass"></param>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDeviceCapabilities.ExtractEvents(PortableDeviceApiLib.PortableDeviceClass)">
+            <summary>
+            Extract event supported by device
+            </summary>
+            <param name="portableDeviceClass"></param>
+        </member>
+        <member name="T:PortableDeviceLib.PortableDeviceCollection">
+            <summary>
+            Manage a collection of <see cref="T:PortableDeviceLib.PortableDevice"/> from the WPD API Interop
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDeviceCollection.#ctor(System.String,System.Single,System.Single)">
+            <summary>
+            Private default constructor
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDeviceCollection.AutoConnectToPortableDevice">
+            <summary>
+            Get or set a value that indicate if we autoconnect to PortableDevice when creating a new instance
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDeviceCollection.Count">
+            <summary>
+            Gets the number of PortableDevice connected
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDeviceCollection.DeviceIds">
+            <summary>
+            Get the device ID list
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDeviceCollection.Devices">
+            <summary>
+            Get the list of devices
+            </summary>
+        </member>
+        <member name="P:PortableDeviceLib.PortableDeviceCollection.Instance">
+            <summary>
+            Gets or sets the instance of PortableDeviceCollection
+            </summary>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDeviceCollection.GetPortableDeviceById(System.String)">
+            <summary>
+            Get the portable device by his id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDeviceCollection.RemoveDevice(System.String)">
+            <summary>
+            remove a disconected device, this should be call after device disconnected
+             </summary>
+            <param name="id">Device ide of the disconnected device</param>
+        </member>
+        <member name="M:PortableDeviceLib.PortableDeviceCollection.CreateInstance(System.String,System.Single,System.Single)">
+            <summary>
+            Create the unique instance of PortableDeviceCollection
+            </summary>
+            <param name="appName"></param>
+            <param name="majorVersion"></param>
+            <param name="minorVersion"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PortableDeviceLib.PortableDeviceGuids">
+            <summary>
+            Consts from wpd.h
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -14,15 +14,32 @@
     <ProjectReference Include="src\VL.Devices.DigiCamControl.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="lib\net461\Accord.dll" />
+    <Content Include="lib\net461\Accord.dll.config" />
+    <Content Include="lib\net461\Accord.Video.DirectShow.dll" />
+    <Content Include="lib\net461\Accord.Video.DirectShow.xml" />
+    <Content Include="lib\net461\Accord.Video.dll" />
+    <Content Include="lib\net461\Accord.Video.xml" />
+    <Content Include="lib\net461\Accord.xml" />
     <Content Include="lib\net461\CameraControl.Devices.dll" />
     <Content Include="lib\net461\CameraControl.Devices.XML" />
     <Content Include="lib\net461\Canon.Eos.Framework.dll" />
+    <Content Include="lib\net461\Canon.Eos.Framework.xml" />
     <Content Include="lib\net461\Interop.PortableDeviceApiLib.dll" />
+    <Content Include="lib\net461\Interop.PortableDeviceTypesLib.dll" />
+    <Content Include="lib\net461\Newtonsoft.Json.dll" />
+    <Content Include="lib\net461\Newtonsoft.Json.xml" />
     <Content Include="lib\net461\PortableDeviceLib.dll" />
     <Content Include="lib-native\x64\EDSDK.dll" />
     <Content Include="lib-native\x64\EdsImage.dll" />
     <Content Include="lib-native\x86\EDSDK.dll" />
     <Content Include="lib-native\x86\EdsImage.dll" />
+    <Content Include="lib\net461\PortableDeviceLib.xml" />
+    <Content Include="lib\net461\Rssdp.Native.dll" />
+    <Content Include="lib\net461\Rssdp.Native.xml" />
+    <Content Include="lib\net461\websocket-sharp.dll" />
+    <Content Include="lib\net461\websocket-sharp.xml" />
+    <Content Include="VL.Devices.DigiCamControl.Dev.vl" />
     <Content Include="VL.Devices.DigiCamControl.vl" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

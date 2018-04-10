@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50debug35.12.dtd" >
-   <PATCH nodename="C:\Users\joreg\Documents\repos\vl-others\VL.Devices.DigiCamControl\vvvv\girlpower\DIgiCamDemo.v4p" systemname="DIgiCamDemo" filename="C:\Users\H\Documents\Praxis\Github\vlstuff\VL.Devices.DigiCamControl\vvvv\girlpower\DIgiCamDemo.v4p" locked="0" scrollx="15" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Users\joreg\Documents\repos\vl-others\VL.Devices.DigiCamControl\vvvv\girlpower\DigiCamDemo.v4p" systemname="DIgiCamDemo" filename="C:\Users\H\Documents\Praxis\Github\vlstuff\VL.Devices.DigiCamControl\vvvv\girlpower\DIgiCamDemo.v4p" locked="0" scrollx="15" scrolly="0">
    <BOUNDS type="Window" left="0" top="5760" width="8625" height="6945">
    </BOUNDS>
    <NODE systemname="RENDERER (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="8">
@@ -16,10 +16,10 @@
    <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="98" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4200" top="2100" width="480" height="480">
+   <BOUNDS type="Box" left="4200" top="2100" width="525" height="705">
    </BOUNDS>
    <BOUNDS type="Node" left="4200" top="2100" width="0" height="0">
    </BOUNDS>
@@ -33,7 +33,7 @@
    </PIN>
    <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
+   <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
    </PIN>
@@ -91,7 +91,7 @@
    <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="118" dstpinname="Layer 1">
    </LINK>
    <NODE id="99" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="1860" top="2085" width="2250" height="510">
+   <BOUNDS type="Box" left="1860" top="2085" width="2295" height="735">
    </BOUNDS>
    <BOUNDS type="Node" left="1860" top="2085" width="0" height="0">
    </BOUNDS>
@@ -270,4 +270,6 @@
    </LINK>
    <LINK srcnodeid="292" srcpinname="Result" dstnodeid="273" dstpinname="Data">
    </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
    </PATCH>

@@ -1,0 +1,424 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CameraControl.Devices</name>
+    </assembly>
+    <members>
+        <member name="M:CameraControl.Devices.BaseCameraDevice.SetCameraField(CameraControl.Devices.Classes.CameraFieldType,System.String)">
+            <summary>
+            Sets the in comment field.
+            </summary>
+            <param name="cameraFieldType"> </param>
+            <param name="comment">The comment.</param>
+        </member>
+        <member name="F:CameraControl.Devices.BaseMTPCamera.TransferRetries">
+            <summary>
+            The number of times to retry failed transfers.
+            </summary>
+        </member>
+        <member name="F:CameraControl.Devices.BaseMTPCamera._timer">
+            <summary>
+            The timer for get periodically the event list
+            </summary>
+        </member>
+        <member name="F:CameraControl.Devices.BaseMTPCamera._eventIsbusy">
+            <summary>
+            Variable to check if event processing is in progress 
+            </summary>
+        </member>
+        <member name="M:CameraControl.Devices.BaseMTPCamera.TransferFile(System.Object,System.String)">
+            <summary>
+            Transfers the file and saves it to the specified filename.
+            </summary>
+            <param name="o">The object handle.</param>
+            <param name="filename">The filename.</param>
+        </member>
+        <member name="M:CameraControl.Devices.BaseMTPCamera.TransferFile(System.Object,System.IO.Stream)">
+            <summary>
+            Transfers the file and writes it to the specified stream.
+            </summary>
+            <param name="o">The object handle.</param>
+            <param name="stream">The stream.</param>
+        </member>
+        <member name="P:CameraControl.Devices.CameraDeviceManager.UseExperimentalDrivers">
+            <summary>
+            Gets or sets a value indicating whether use experimental drivers.
+            Experimental drivers isn't tested and may not implement all camera possibilities 
+            </summary>
+            <value>
+            <c>true</c> if [use experimental drivers]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:CameraControl.Devices.CameraDeviceManager.DeviceClass">
+            <summary>
+            Gets or sets the natively supported model dictionary.
+            This property is used to find the right driver for connected camera, 
+            if model not found in this dictionary generic wia driver will used.
+            </summary>
+            <value>
+            The device class.
+            </value>
+        </member>
+        <member name="P:CameraControl.Devices.CameraDeviceManager.SelectedCameraDevice">
+            <summary>
+            Gets or sets the default selected camera device. When new camera connected this property set automatically to new device
+            </summary>
+            <value>
+            The selected camera device.
+            </value>
+        </member>
+        <member name="P:CameraControl.Devices.CameraDeviceManager.DetectWebcams">
+            <summary>
+            If enabled the application will detect the connected webcams
+            </summary>
+            <value>
+              <c>true</c> if [detect webcams]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:CameraControl.Devices.CameraDeviceManager.OnCameraDisconnected(CameraControl.Devices.ICameraDevice)">
+            <summary>
+            Raise CameraDisconnected event.
+            </summary>
+            <param name="cameraDevice">The camera device.</param>
+        </member>
+        <member name="M:CameraControl.Devices.CameraDeviceManager.GetNativeDriver(System.String)">
+            <summary>
+            Gets the native driver based on camera model.
+            </summary>
+            <param name="model">The model name.</param>
+            <returns>If the model not supported return null else the driver type</returns>
+        </member>
+        <member name="P:CameraControl.Devices.CameraDeviceManager.DisableNativeDrivers">
+            <summary>
+            Gets or sets a value for disabling native drivers.
+            </summary>
+            <value>
+            <c>true</c> all devices are loaded like WIA devices <c>false</c> If native driver are available for connected model the will be loaded that driver else will be loaded WIA driver.
+            </value>
+        </member>
+        <member name="M:CameraControl.Devices.CameraDeviceManager.ConnectToCamera(System.Boolean)">
+            <summary>
+            Populate the ConnectedDevices list with connected cameras. This method will be called automatically every time new devices will be connected 
+            Except Canon cameras that is handled by framework event handler
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:CameraControl.Devices.CameraDeviceManager.CameraConnected">
+            <summary>
+            Occurs when a new camera is connected.
+            </summary>
+        </member>
+        <member name="E:CameraControl.Devices.CameraDeviceManager.CameraDisconnected">
+            <summary>
+            Occurs when a camera disconnected.
+            </summary>
+        </member>
+        <member name="E:CameraControl.Devices.CameraDeviceManager.CameraSelected">
+            <summary>
+            Occurs when SelectedCameraDevice property changed.
+            </summary>
+        </member>
+        <member name="P:CameraControl.Devices.Classes.Capability`1.Current">
+            <summary>
+            Current value of the specified parameter.
+            </summary>
+        </member>
+        <member name="P:CameraControl.Devices.Classes.Capability`1.Candidates">
+            <summary>
+            Candidate values of the specified parameter.
+            </summary>
+        </member>
+        <member name="P:CameraControl.Devices.Classes.LiveViewData.ImageWidth">
+            <summary>
+            Gets or sets the width of the captured image.
+            </summary>
+            <value>
+            The width of the image.
+            </value>
+        </member>
+        <member name="P:CameraControl.Devices.Classes.LiveViewData.ImageHeight">
+            <summary>
+            Gets or sets the height of the captured image.
+            </summary>
+            <value>
+            The height of the image.
+            </value>
+        </member>
+        <member name="P:CameraControl.Devices.Classes.LiveViewData.FocusX">
+            <summary>
+            Gets or sets the focus point x axis .
+            </summary>
+            <value>
+            The focus x.
+            </value>
+        </member>
+        <member name="P:CameraControl.Devices.Classes.LiveViewData.FocusY">
+            <summary>
+            Gets or sets the focus point y axis.
+            </summary>
+            <value>
+            The focus y.
+            </value>
+        </member>
+        <member name="P:CameraControl.Devices.Classes.LiveViewData.HaveFocusData">
+            <summary>
+            Gets or sets a value indicating whether focussing info included.
+            </summary>
+            <value>
+              <c>true</c> if [have focus data]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:CameraControl.Devices.Classes.LiveViewData.ImageData">
+            <summary>
+            Gets or sets the live view image data.
+            May contain additional information, use ImageDataPosition to get live view image 
+            </summary>
+            <value>
+            The image data.
+            </value>
+        </member>
+        <member name="P:CameraControl.Devices.Classes.LiveViewData.ImageDataPosition">
+            <summary>
+            Gets or sets the image data starting position in ImageData.
+            </summary>
+            <value>
+            The image data position.
+            </value>
+        </member>
+        <member name="P:CameraControl.Devices.Classes.PropertyValue`1.Available">
+            <summary>
+            Indicate if the property is available and can be used 
+            </summary>
+        </member>
+        <member name="P:CameraControl.Devices.Classes.PropertyValue`1.HaveError">
+            <summary>
+            Gets or sets a value indicating the propertie 
+            settings wasn't errorless.
+            </summary>
+            <value>
+              <c>true</c> if [have error]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:CameraControl.Devices.Classes.PropertyValue`1.AddValues(System.String,`0)">
+            <summary>
+            After value add finished, ReloadValues should be called
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:CameraControl.Devices.Classes.PropertyValue`1.ReloadValues">
+            <summary>
+            Reload display values 
+            Should be called always after AddValues
+            </summary>
+        </member>
+        <member name="M:CameraControl.Devices.Classes.PropertyValue`1.GetValues">
+            <summary>
+            Refresh display values based on replace values 
+            </summary>
+        </member>
+        <member name="M:CameraControl.Devices.Classes.PropertyValue`1.ReplaceValue(System.String,System.String)">
+            <summary>
+            Replace a displayed value 
+            GetValues() call is required
+            </summary>
+            <param name="oldVal"></param>
+            <param name="newVal"></param>
+        </member>
+        <member name="P:CameraControl.Devices.ICameraDevice.IsBusy">
+            <summary>
+            If false the camera is ready to take next capture
+            Should be handled by the user code
+            </summary>
+        </member>
+        <member name="P:CameraControl.Devices.ICameraDevice.HaveLiveView">
+            <summary>
+            This property will be removed, replaced by GetCapability
+            </summary>
+        </member>
+        <member name="P:CameraControl.Devices.ICameraDevice.CaptureInSdRam">
+            <summary>
+            Gets or sets a value indicating whether photos captured are captured in SDRam.
+            </summary>
+            <value>
+              <c>true</c> if true photos are captured in SDRam; otherwise, <c>false</c> photos will be recorded in card.
+            </value>
+        </member>
+        <member name="P:CameraControl.Devices.ICameraDevice.PortName">
+            <summary>
+            Gets or sets a unique indentifier for device based on connection mode.
+            </summary>
+            <value>
+            The name of the port.
+            </value>
+        </member>
+        <member name="P:CameraControl.Devices.ICameraDevice.IsConnected">
+            <summary>
+            Gets or sets a value indicating whether the camera is connected.
+            </summary>
+            <value>
+            <c>true</c> if this instance is connected; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:CameraControl.Devices.ICameraDevice.AttachedPhotoSession">
+            <summary>
+            Gets or sets the attached abject to the camera .
+            </summary>
+            <value>
+            The attached photo session.
+            </value>
+        </member>
+        <member name="M:CameraControl.Devices.ICameraDevice.GetCapability(CameraControl.Devices.Classes.CapabilityEnum)">
+            <summary>
+            Check is a capability is supported
+            </summary>
+            <param name="capabilityEnum">The capability enum.</param>
+            <returns><c>true</c> if capability supported</returns>
+        </member>
+        <member name="M:CameraControl.Devices.ICameraDevice.EndBulbMode">
+            <summary>
+            Support only if capability Bulb is specified
+            </summary>
+        </member>
+        <member name="M:CameraControl.Devices.ICameraDevice.StartBulbMode">
+            <summary>
+            Support only if capability Bulb is specified
+            </summary>
+        </member>
+        <member name="E:CameraControl.Devices.ICameraDevice.PhotoCaptured">
+            <summary>
+            Occurs when photo captured.
+            </summary>
+        </member>
+        <member name="E:CameraControl.Devices.ICameraDevice.CaptureCompleted">
+            <summary>
+            Occurs when all capture images done.
+            </summary>
+        </member>
+        <member name="E:CameraControl.Devices.ICameraDevice.CameraDisconnected">
+            <summary>
+            Occurs when [camera disconnected].
+            </summary>
+        </member>
+        <member name="P:CameraControl.Devices.ICameraDevice.AdvancedProperties">
+            <summary>
+            Gets or sets the arbitrary number of advanced properties.
+            </summary>
+            <value>
+            The advanced properties.
+            </value>
+        </member>
+        <member name="M:CameraControl.Devices.ICameraDevice.GetObjects(System.Object,System.Boolean)">
+            <summary>
+            Gets files stored in card.
+            </summary>
+            <param name="storageId">The storage id.</param>
+            <param name="loadThumbs">Load thumbnail atached to object</param>
+            <returns></returns>
+        </member>
+        <member name="T:CameraControl.Devices.Nikon.NikonBase">
+            <summary>
+            Base Nikon driver
+            </summary>
+        </member>
+        <member name="P:CameraControl.Devices.Nikon.NikonBase.LiveViewMovieOn">
+            <summary>
+            Gets or sets a value indicating whether the camera swich is in movie mode.
+            </summary>
+            <value>
+              <c>true</c> if [live view is in movie mode]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:CameraControl.Devices.Nikon.NikonD80.CapturePhotoNoAf">
+            <summary>
+            Take picture with no autofocus
+            If live view runnig the live view is stoped after done restarted
+            </summary>
+        </member>
+        <member name="M:CameraControl.Devices.Nikon.NikonD90.CapturePhotoNoAf">
+            <summary>
+            Take picture with no autofocus
+            If live view runnig the live view is stoped after done restarted
+            </summary>
+        </member>
+        <member name="M:CameraControl.Devices.Sony.SonyWifiCamera.AsPrimitiveList``1(System.String)">
+            <summary>
+            For response which has a single Array consists of a single type.
+            </summary>
+            <typeparam name="T">Type of the value</typeparam>
+            <param name="jString"></param>
+        </member>
+        <member name="M:CameraControl.Devices.StaticHelper.GetSerial(System.String)">
+            <summary>
+            Return serial number component from a pnp id string
+            </summary>
+            <param name="pnpstring"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CameraControl.Devices.StaticHelper.GetUniqueFilename(System.String,System.Int32,System.String)">
+            <summary>
+            Generate a unique file name 
+            </summary>
+            <param name="prefix">First part of file name including full path</param>
+            <param name="counter">The counter.</param>
+            <param name="sufix">The last part of file name most cases the file extension.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CameraControl.Devices.TransferProtocol.DDServer.Container.Write(System.IO.Stream)">
+            <summary>
+            Write all bytes of this container to stream.
+            </summary>
+            <param name="s"></param>
+        </member>
+        <member name="F:CameraControl.Devices.TransferProtocol.DDServer.ContainerHeader.HeaderLength">
+            <summary>
+            Header length in bytes
+            </summary>
+        </member>
+        <member name="F:CameraControl.Devices.TransferProtocol.DDServer.ContainerHeader.Code">
+            <summary>
+            USB Still Image Capture Device Definition: This field contains the PIMA 15740 OperationCode, ResponseCode, or EventCode.
+            </summary>
+        </member>
+        <member name="F:CameraControl.Devices.TransferProtocol.DDServer.ContainerHeader.ContainerType">
+            <summary>
+            This field describes the type of the container
+            </summary>
+        </member>
+        <member name="F:CameraControl.Devices.TransferProtocol.DDServer.ContainerHeader.Length">
+            <summary>
+            Container Length (including payload length)
+            </summary>
+        </member>
+        <member name="F:CameraControl.Devices.TransferProtocol.DDServer.ContainerHeader.TransactionID">
+            <summary>
+            USB Still Image Capture Device Definition: This is a host generated number that associates all phases of an PIMA15740 operation
+            </summary>
+        </member>
+        <member name="M:CameraControl.Devices.TransferProtocol.YiCameraProtocol.SetupRecieveCallback(System.Net.Sockets.Socket)">
+            <summary>
+            Setup the callback for recieved data and loss of conneciton
+            </summary>
+        </member>
+        <member name="P:Kazyx.DeviceDiscovery.SonyCameraDeviceInfo.Endpoints">
+            <summary>
+            K-V pairs of service name and its endpoint URL
+            </summary>
+        </member>
+        <member name="M:ddserverTest.ResponseBlockContainer.#ctor(System.Int32,System.UInt32[])">
+            <summary>
+            This constructor is used mainly for testing, because response blocks are
+            usually read from stream
+            </summary>
+            <param name="responseCode"></param>
+            <param name="parameters"></param>
+        </member>
+        <member name="M:ddserverTest.ResponseBlockContainer.#ctor(CameraControl.Devices.TransferProtocol.DDServer.ContainerHeader,System.IO.Stream)">
+            <summary>
+            Read response block from stream
+            </summary>
+            <param name="header">the container header</param>
+            <param name="payload">data after header</param>
+        </member>
+    </members>
+</doc>

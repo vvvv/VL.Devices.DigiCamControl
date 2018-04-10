@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="GB2VxUl5VdhM5rsl5IbjQg" Version="0.75">
+<Document xmlns:p="property" Id="GB2VxUl5VdhM5rsl5IbjQg" Version="0.79">
   <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="0.35.21" />
   <NugetDependency Id="U2JwHqMJLyGLDs97lM6eZ6" Location="VL.CoreLib.VVVV" Version="0.35.21" />
   <NugetDependency Id="Q18ZLENm9gzPhBnFnztPMP" Location="VL.Core" Version="0.35.21" />
@@ -18,11 +18,11 @@
         <Patch Id="CzjSvRY5dvXQDxmAOA8mZj">
           <Patch Id="ESJZDDS0I02LAWDOx9RJVV" Name="Create" />
           <Patch Id="OkqGvJfa3PDOppp4PFQghD" Name="Update" ManuallySortedPins="true">
+            <Pin Id="H4qyEhsGBgbMSfxmJylSrq" Name="Result" Kind="OutputPin" Bounds="433,535" />
             <Pin Id="DzqcTkPSBTHPrcIqlZmoFR" Name="Display Names" Kind="OutputPin" />
             <Pin Id="F6jVEhCFpunM9zN0pNovx1" Name="Connected" Kind="OutputPin" />
             <Pin Id="JhQ3irDmCv4MtCmPKlD04h" Name="Captured File Path" Kind="OutputPin" />
             <Pin Id="MJDcyWhb4m0QG9R6ZScmJE" Name="Directory" Kind="InputPin" />
-            <Pin Id="H4qyEhsGBgbMSfxmJylSrq" Name="Result" Kind="OutputPin" Bounds="433,535" />
           </Patch>
           <Canvas Id="C4yd3S6BFv9NWqJ2WO3OFi">
             <Node Bounds="250,328,242,13" Id="OQ3JcvHYdOkQOWkSAPPLxf">
@@ -158,8 +158,8 @@
             <ControlPoint Id="Avk1Cpyl6WsM3QgKrwz0ZS" Bounds="430,381" />
             <Pad Id="PG4AhwgtHeNMwkmjN4lBwU" Bounds="43,856,180,96" ShowValueBox="true" isIOBox="true" Value="&quot;If there is no SDCard in your Camera you must set the capture to SDRam in order to download it to the computer&quot;">
               <p:ValueBoxSettings>
-                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
                 <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
               </p:ValueBoxSettings>
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="String" />
@@ -174,8 +174,8 @@
             </Pad>
             <Pad Id="PXMoOheQjMOMeXhXhHljyK" Bounds="996,381,152,44" ShowValueBox="true" isIOBox="true" Value="&quot;Also used for 'Continuous Shooting'&quot;">
               <p:ValueBoxSettings>
-                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
                 <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
               </p:ValueBoxSettings>
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="String" />
