@@ -8245,6 +8245,15 @@
           </Node>
         </Canvas>
       </Canvas>
+      <Pad Id="NI8szIh4C6fO0vq6KeGFiY" Bounds="423,88,286,15" ShowValueBox="true" isIOBox="true" Value="https://github.com/dukus/digiCamControl">
+        <p:TypeAnnotation>
+          <Choice Kind="TypeFlag" Name="String" />
+        </p:TypeAnnotation>
+        <p:ValueBoxSettings>
+          <p:fontsize p:Type="Int32">9</p:fontsize>
+          <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+        </p:ValueBoxSettings>
+      </Pad>
     </Canvas>
     <!--
 
