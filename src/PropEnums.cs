@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
-using System.Reactive.Linq;
-using VL.Core;
 using VL.Lib.Collections;
 
 namespace DigiCamControl
