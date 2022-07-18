@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Document xmlns:p="property" Id="GB2VxUl5VdhM5rsl5IbjQg" LanguageVersion="2021.4.9.948" Version="0.128">
   <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="2021.4.8-0940-g49c97a1c2c" />
-  <PlatformDependency Id="SH6OxO0TRP7O1tYI8OgHwr" Location="../../../Praxis/Github/vlstuff/VL.Devices.DigiCamControl/lib/net461/CameraControl.Devices.dll" />
-  <PlatformDependency Id="OHFE59cG7dgMdodHYFaQgH" Location="./src/bin/Debug/VL.Devices.DigiCamControl.dll" />
+  <PlatformDependency Id="SH6OxO0TRP7O1tYI8OgHwr" Location="./lib/net472/CameraControl.Devices.dll" />
+  <PlatformDependency Id="OHFE59cG7dgMdodHYFaQgH" Location="./lib/net472/VL.Devices.DigiCamControl.dll" />
   <Patch Id="Th8hpfHvBF4Lk6VOwDCc9D">
     <Canvas Id="NtZT52Xp5qNOXK0fF2H7kv" DefaultCategory="Devices.DigiCamControl" CanvasType="FullCategory">
       <!--
