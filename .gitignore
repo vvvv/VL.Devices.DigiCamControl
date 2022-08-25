@@ -7,10 +7,8 @@ bin/
 obj/
 .vs/
 packages/
-lib/net461/
-appveyor/nuget.exe
 *.nupkg
 
-/.vl
-/.vl/
-/lib/net472/
+VL.Devices.DigiCamControl.dll
+VL.Devices.DigiCamControl.pdb
+.vl/
