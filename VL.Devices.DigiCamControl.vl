@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="GB2VxUl5VdhM5rsl5IbjQg" LanguageVersion="2021.4.9.948" Version="0.128">
-  <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="2021.4.8-0940-g49c97a1c2c" />
+<Document xmlns:p="property" Id="GB2VxUl5VdhM5rsl5IbjQg" LanguageVersion="2021.4.10.1043" Version="0.128">
+  <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="2021.4.10" />
   <PlatformDependency Id="SH6OxO0TRP7O1tYI8OgHwr" Location="./lib/net472/CameraControl.Devices.dll" />
   <PlatformDependency Id="OHFE59cG7dgMdodHYFaQgH" Location="./lib/net472/VL.Devices.DigiCamControl.dll" />
   <Patch Id="Th8hpfHvBF4Lk6VOwDCc9D">
@@ -687,24 +687,8 @@
                 <Link Id="IapUFj1OJFtNg0ZSdeiEXO" Ids="OGBZYJDkZGAQPULD4FqDXC,TYS4sYpPZwmNGP8Xx1kEds" IsHidden="true" />
                 <ControlPoint Id="BIyu1evi4pVPq1VSz8tMzf" Bounds="2264,566" />
                 <Link Id="SaFOw89HNc0QMjLeRxLIp7" Ids="AeimIOYj1ogNSsoRIey4cn,BIyu1evi4pVPq1VSz8tMzf" IsHidden="true" />
-                <Pin Id="AeimIOYj1ogNSsoRIey4cn" Name="Input" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.dll">
-                    <Choice Kind="TypeFlag" Name="CameraDeviceDefinition" />
-                  </p:TypeAnnotation>
-                </Pin>
-                <Pin Id="OGBZYJDkZGAQPULD4FqDXC" Name="ICameras" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.CoreLib.vl">
-                    <Choice Kind="TypeFlag" Name="Spread" />
-                    <FullNameCategoryReference ID="Collections" />
-                    <p:TypeArguments>
-                      <TypeReference>
-                        <Choice Kind="TypeFlag" Name="ICameraDevice" />
-                      </TypeReference>
-                    </p:TypeArguments>
-                  </p:TypeAnnotation>
-                </Pin>
                 <Node Bounds="2260,588,178,100" Id="IjD7PVKCqzSQMHzPrfKuaC">
-                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
                     <Choice Kind="RegionFlag" Name="Region" Fixed="true" />
                     <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
                     <CategoryReference Kind="Category" Name="Primitive" />
@@ -760,6 +744,22 @@
                 <Link Id="IcSDL5AWrhxOWopfcVj0hp" Ids="BIyu1evi4pVPq1VSz8tMzf,KcdbZOp9QSCLgQXO3snzjA" />
                 <Link Id="I6ZzaTRfWmAOaflz89I2oD" Ids="Cw7QDAxes0jMKjyvkrvm0Q,Jp7FnNrazpUL8IW8vC0ZOw" />
                 <Link Id="FbuLkbULKU5PFPbAUHw0W1" Ids="LGeJbWfbeNKMj0afEJTSlu,FUm3uma0e4AMyZzO9zj91E" />
+                <Pin Id="AeimIOYj1ogNSsoRIey4cn" Name="Input" Kind="InputPin">
+                  <p:TypeAnnotation LastCategoryFullName="DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.dll">
+                    <Choice Kind="TypeFlag" Name="CameraDeviceDefinition" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Pin Id="OGBZYJDkZGAQPULD4FqDXC" Name="ICameras" Kind="InputPin">
+                  <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
+                    <Choice Kind="TypeFlag" Name="Spread" />
+                    <FullNameCategoryReference ID="Collections" />
+                    <p:TypeArguments>
+                      <TypeReference>
+                        <Choice Kind="TypeFlag" Name="ICameraDevice" />
+                      </TypeReference>
+                    </p:TypeArguments>
+                  </p:TypeAnnotation>
+                </Pin>
               </Patch>
             </Node>
             <Node Bounds="-71,237,94,13" Id="RXB6AhD7nKBN7oNYRJ2cw8">
@@ -910,7 +910,7 @@
                 <ControlPoint Id="P1OPIbUENTyLvBYpuES24e" Bounds="1825,-58" />
                 <Link Id="E3HZc56DTQwNVW5QwZLYoL" Ids="C4xgbsMFVM6PpJtCz0Nqb4,P1OPIbUENTyLvBYpuES24e" IsHidden="true" />
                 <Node Bounds="1817,-7,146,75" Id="VKJQaoFikUZNAc3Gd2cl3c">
-                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
                     <Choice Kind="RegionFlag" Name="Region" Fixed="true" />
                     <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
                     <CategoryReference Kind="Category" Name="Primitive" />
@@ -8033,110 +8033,6 @@
             <Patch Id="QqE7TbTwBfqLw6xKa5uUs0">
               <Canvas Id="ASSrTExmRmtPeRJKH8KtzC" CanvasType="Group" />
               <ProcessDefinition Bounds="-358,226,5,13" Id="LMghlw60lMJNdTNUgn86Na" IsHidden="true" />
-            </Patch>
-          </Node>
-          <!--
-
-    ************************ PhotoCapturedEventArgs ************************
-
--->
-          <Node Name="PhotoCapturedEventArgs" Bounds="552,363" Id="MG1vAftVCvSNO8HQ8fDtJ2">
-            <p:NodeReference>
-              <Choice Kind="ForwardDefinition" Name="Forward" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:NodeReference>
-            <p:TypeAnnotation LastSymbolSource="CameraControl.Devices.dll">
-              <Choice Kind="TypeFlag" Name="PhotoCapturedEventArgs" />
-              <FullNameCategoryReference ID="CameraControl.Devices.Classes" />
-            </p:TypeAnnotation>
-            <p:ForwardAllNodesOfTypeDefinition p:Type="Boolean">true</p:ForwardAllNodesOfTypeDefinition>
-            <Patch Id="Dg9UIj95u5dLMXqCYnPZVm">
-              <Canvas Id="OEozVzQPKFFMiH8UqqJGmo" CanvasType="Group">
-                <!--
-
-    ************************ CreateDefault ************************
-
--->
-                <Node Name="CreateDefault" Bounds="458,238,415,376" Id="IxQkjD9n4WcOl8soVU88YX">
-                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
-                    <Choice Kind="RegionFlag" Name="Region" Fixed="true" />
-                    <Choice Kind="OperationDefinition" Name="Operation" />
-                    <CategoryReference Kind="Category" Name="Primitive" />
-                  </p:NodeReference>
-                  <Patch Id="RKcCSstRXnrPpvzjiKimHO" IsGeneric="true" ManuallySortedPins="true">
-                    <ControlPoint Id="OihRtrJgRldPy8kwAgbWL2" Bounds="478,595" />
-                    <Link Id="T9F31rcb7x4NQx8vNVLnPv" Ids="OihRtrJgRldPy8kwAgbWL2,BR7DDqNRE9jMO6XczsfCLG" IsHidden="true" />
-                    <Node Bounds="470,261,99,22" Id="FHR34al6fALOFJfKjfJxCA">
-                      <p:NodeReference LastCategoryFullName="CameraControl.Devices.Classes.PhotoCapturedEventArgs" LastSymbolSource="CameraControl.Devices.dll">
-                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <Choice Kind="OperationCallFlag" Name="Create" />
-                        <CategoryReference Kind="AssemblyCategory" Name="PhotoCapturedEventArgs" NeedsToBeDirectParent="true" />
-                      </p:NodeReference>
-                      <Pin Id="C7fsfKeSUM7Lu0gQTyjTZU" Name="Output" Kind="StateOutputPin" />
-                    </Node>
-                    <Node Bounds="478,311,99,22" Id="BVSqzfuEn6CPSb4bZE0sQ5">
-                      <p:NodeReference LastCategoryFullName="CameraControl.Devices.Classes.PhotoCapturedEventArgs" LastSymbolSource="CameraControl.Devices.dll">
-                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <CategoryReference Kind="AssemblyCategory" Name="PhotoCapturedEventArgs" NeedsToBeDirectParent="true" />
-                        <Choice Kind="OperationCallFlag" Name="SetEventArgs" />
-                      </p:NodeReference>
-                      <Pin Id="N01CNiAOX3KM5YRFT3dHLy" Name="Input" Kind="StateInputPin" />
-                      <Pin Id="P3JEOOfbBODOgd98F5sEZr" Name="Output" Kind="StateOutputPin" />
-                      <Pin Id="VAqcm9ZgoyWNYmFPeP8gGk" Name="Value" Kind="InputPin" />
-                    </Node>
-                    <Link Id="FMDEDaeINtMNz0UH6fhiC1" Ids="C7fsfKeSUM7Lu0gQTyjTZU,N01CNiAOX3KM5YRFT3dHLy" />
-                    <Node Bounds="478,348,99,22" Id="K1mwnml655TMaYEvxK1QBy">
-                      <p:NodeReference LastCategoryFullName="CameraControl.Devices.Classes.PhotoCapturedEventArgs" LastSymbolSource="CameraControl.Devices.dll">
-                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <CategoryReference Kind="AssemblyCategory" Name="PhotoCapturedEventArgs" NeedsToBeDirectParent="true" />
-                        <Choice Kind="OperationCallFlag" Name="SetCameraDevice" />
-                      </p:NodeReference>
-                      <Pin Id="QSoy1cu2KmBL5W6Rohnvhz" Name="Input" Kind="StateInputPin" />
-                      <Pin Id="NdqqnpD9sPMOJWJQ7yqNy1" Name="Output" Kind="StateOutputPin" />
-                      <Pin Id="R6hKoUg1GJiOAz9KXBS1Y0" Name="Value" Kind="InputPin" />
-                    </Node>
-                    <Link Id="J3k7VW8g0XsLbfv1NS9M22" Ids="P3JEOOfbBODOgd98F5sEZr,QSoy1cu2KmBL5W6Rohnvhz" />
-                    <Node Bounds="478,388,99,22" Id="HM9OE2P8OkHNTuQZJ7rHO7">
-                      <p:NodeReference LastCategoryFullName="CameraControl.Devices.Classes.PhotoCapturedEventArgs" LastSymbolSource="CameraControl.Devices.dll">
-                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <CategoryReference Kind="AssemblyCategory" Name="PhotoCapturedEventArgs" NeedsToBeDirectParent="true" />
-                        <Choice Kind="OperationCallFlag" Name="SetFileName" />
-                      </p:NodeReference>
-                      <Pin Id="Ljl0km2KeayPzw2YZPjjow" Name="Input" Kind="StateInputPin" />
-                      <Pin Id="F1pxeOKfAJrPO3WsHDq7gI" Name="Output" Kind="StateOutputPin" />
-                      <Pin Id="GCKOpTXxW2PLp71n6GmNnV" Name="Value" Kind="InputPin" />
-                    </Node>
-                    <Node Bounds="478,425,99,22" Id="QWqBnTnZPrgN19PnuxT3hV">
-                      <p:NodeReference LastCategoryFullName="CameraControl.Devices.Classes.PhotoCapturedEventArgs" LastSymbolSource="CameraControl.Devices.dll">
-                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <CategoryReference Kind="AssemblyCategory" Name="PhotoCapturedEventArgs" NeedsToBeDirectParent="true" />
-                        <Choice Kind="OperationCallFlag" Name="SetHandle" />
-                      </p:NodeReference>
-                      <Pin Id="RjVFgcvCcxXOg1ebSzTlNz" Name="Input" Kind="StateInputPin" />
-                      <Pin Id="NOoBQA5kTlUNrlHEfmWxqu" Name="Output" Kind="StateOutputPin" />
-                      <Pin Id="HwlPDr9eQiSOOVEog5icIM" Name="Value" Kind="InputPin" />
-                    </Node>
-                    <Link Id="QTRnkhTVCJrOdAWY2GeC4v" Ids="F1pxeOKfAJrPO3WsHDq7gI,RjVFgcvCcxXOg1ebSzTlNz" />
-                    <Link Id="UJySOJuawIuQZve9zRCfut" Ids="NdqqnpD9sPMOJWJQ7yqNy1,Ljl0km2KeayPzw2YZPjjow" />
-                    <Node Bounds="478,495,99,22" Id="FEUP8NdiK72OU5Zz0j3dJa">
-                      <p:NodeReference LastCategoryFullName="CameraControl.Devices.Classes.PhotoCapturedEventArgs" LastSymbolSource="CameraControl.Devices.dll">
-                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <CategoryReference Kind="AssemblyCategory" Name="PhotoCapturedEventArgs" NeedsToBeDirectParent="true" />
-                        <Choice Kind="OperationCallFlag" Name="SetWiaImageItem" />
-                      </p:NodeReference>
-                      <Pin Id="C6JRDuNTXRYLf5y5oL210j" Name="Input" Kind="StateInputPin" />
-                      <Pin Id="AYp6zJ2rxooMMfweEoVTF4" Name="Output" Kind="StateOutputPin" />
-                      <Pin Id="SfBCJtz1sKEMESP77U1Str" Name="Value" Kind="InputPin" />
-                    </Node>
-                    <Link Id="BAUvzn40GcgPjAAPABpZ35" Ids="AYp6zJ2rxooMMfweEoVTF4,OihRtrJgRldPy8kwAgbWL2" />
-                    <Link Id="MNZMd08Tt0WMVWIQF8B4jJ" Ids="NOoBQA5kTlUNrlHEfmWxqu,C6JRDuNTXRYLf5y5oL210j" />
-                    <Pin Id="BR7DDqNRE9jMO6XczsfCLG" Name="Output" Kind="StateOutputPin" />
-                  </Patch>
-                </Node>
-              </Canvas>
-              <ProcessDefinition Bounds="-571,90,5,13" Id="RAEqUvYJH9KMJP5ATKYuXr" IsHidden="true">
-                <Fragment Id="D0IFziZea2oLXSHmxilNxy" Patch="IxQkjD9n4WcOl8soVU88YX" Enabled="true" />
-              </ProcessDefinition>
             </Patch>
           </Node>
           <Pad Id="Gsglry2cPGYOic94ssCG17" Bounds="533,296,87,30" ShowValueBox="true" isIOBox="true" Value="Events ">
