@@ -1,4 +1,5 @@
 ﻿using System;
+using VL.Core.CompilerServices;
 using VL.Lib.Collections;
 
 namespace DigiCamControl
@@ -17,7 +18,7 @@ namespace DigiCamControl
         {
         }
 
-        //this method needs to be imported in VL to set the default
+        [CreateDefault]
         public static ShutterSpeed CreateDefault()
         {
             //use method of base class if nothing special required
@@ -39,7 +40,7 @@ namespace DigiCamControl
         {
         }
 
-        //this method needs to be imported in VL to set the default
+        [CreateDefault]
         public static Aperture CreateDefault()
         {
             //use method of base class if nothing special required
@@ -61,7 +62,7 @@ namespace DigiCamControl
         {
         }
 
-        //this method needs to be imported in VL to set the default
+        [CreateDefault]
         public static ISONumber CreateDefault()
         {
             //use method of base class if nothing special required
@@ -84,7 +85,7 @@ namespace DigiCamControl
         {
         }
 
-        //this method needs to be imported in VL to set the default
+        [CreateDefault]
         public static ExposureMeteringMode CreateDefault()
         {
             //use method of base class if nothing special required
@@ -104,7 +105,7 @@ namespace DigiCamControl
         {
         }
 
-        //this method needs to be imported in VL to set the default
+        [CreateDefault]
         public static ExposureCompensation CreateDefault()
         {
             //use method of base class if nothing special required
@@ -125,7 +126,7 @@ namespace DigiCamControl
         {
         }
 
-        //this method needs to be imported in VL to set the default
+        [CreateDefault]
         public static WhiteBalance CreateDefault()
         {
             //use method of base class if nothing special required
@@ -146,7 +147,7 @@ namespace DigiCamControl
         {
         }
 
-        //this method needs to be imported in VL to set the default
+        [CreateDefault]
         public static FocusMode CreateDefault()
         {
             //use method of base class if nothing special required
@@ -167,7 +168,7 @@ namespace DigiCamControl
         {
         }
 
-        //this method needs to be imported in VL to set the default
+        [CreateDefault]
         public static CompressionSetting CreateDefault()
         {
             //use method of base class if nothing special required
@@ -188,7 +189,7 @@ namespace DigiCamControl
         {
         }
 
-        //this method needs to be imported in VL to set the default
+        [CreateDefault]
         public static AdvancedPropertiesMode CreateDefault()
         {
             //use method of base class if nothing special required
@@ -209,7 +210,7 @@ namespace DigiCamControl
         {
         }
 
-        //this method needs to be imported in VL to set the default
+        [CreateDefault]
         public static AdvancedPropertiesValue CreateDefault()
         {
             //use method of base class if nothing special required
@@ -230,7 +231,7 @@ namespace DigiCamControl
         {
         }
 
-        //this method needs to be imported in VL to set the default
+        [CreateDefault]
         public static CameraDevice CreateDefault()
         {
             //use method of base class if nothing special required
