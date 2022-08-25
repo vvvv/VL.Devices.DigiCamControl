@@ -12,3 +12,5 @@ appveyor/nuget.exe
 *.nupkg
 
 /.vl
+/.vl/
+/lib/net472/
