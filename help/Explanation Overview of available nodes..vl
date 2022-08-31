@@ -1,329 +1,315 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="QNIvWYOGBjfMCHAp0J6Lc3" LanguageVersion="2021.4.10.1043" Version="0.128">
-  <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="2021.4.10" />
-  <NugetDependency Id="U2JwHqMJLyGLDs97lM6eZ6" Location="VL.CoreLib.VVVV" Version="0.35.21" />
-  <NugetDependency Id="RNXWG2msFetMaZuo2rm0nD" Location="VL.Devices.DigiCamControl" Version="1.0.0-alpha" />
-  <Patch Id="Th8hpfHvBF4Lk6VOwDCc9D">
-    <Canvas Id="NtZT52Xp5qNOXK0fF2H7kv" DefaultCategory="Main" CanvasType="FullCategory" />
+<Document xmlns:p="property" Id="FtMmvnjs4C7MWbNEtrjP7Y" LanguageVersion="2021.4.10.1043" Version="0.128">
+  <Patch Id="JjCY8sAlGcNLBGKR6XcLJn">
+    <Canvas Id="TlTcFGSkVWlPfXRUaBBU56" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
 
     ************************ Application ************************
 
 -->
-    <Node Name="Application" Bounds="100,100" Id="BxUrVf4QEeMQFRWyqaNvj6">
+    <Node Name="Application" Bounds="100,100" Id="CAVNfds14sLMVMtg4z9f0b">
       <p:NodeReference>
         <Choice Kind="ContainerDefinition" Name="Process" />
         <FullNameCategoryReference ID="Primitive" />
       </p:NodeReference>
-      <Patch Id="N7KSuzoSSICLK7CxWRDynR">
-        <Canvas Id="TACVwzlLT1UL0ONP3x3AQr" CanvasType="Group">
-          <Node Bounds="305,367,242,19" Id="Q0F46EVbd3CNJZkpBDSeJl">
+      <Patch Id="Hodr6IfDCOJQERosIjLLK0">
+        <Canvas Id="JG47kZA0h99Nimx0kBNJ1y" CanvasType="Group">
+          <Node Bounds="59,57,90,19" Id="Py84QRzqTFDL1VCWdZwzLL">
             <p:NodeReference LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessNode" Name="Camera" />
+              <Choice Kind="ProcessAppFlag" Name="CameraManager" />
             </p:NodeReference>
-            <Pin Id="NYVXbMz2C90QQcJjCJuV3k" Name="Device" Kind="InputPin" />
-            <Pin Id="QicRH1TLSGWNRHC4U4zaUJ" Name="Aperture" Kind="InputPin" />
-            <Pin Id="TyRSD3t4MyOLvlSgGi3ZcI" Name="ISO Number" Kind="InputPin" />
-            <Pin Id="C33JmR2QAnXMWpOMndlbL1" Name="Shutter Speed" Kind="InputPin" />
-            <Pin Id="Jhgtu4msR1nMRpz9ulNBk9" Name="Exposure Compensation" Kind="InputPin" />
-            <Pin Id="SZsdB6WiAzbNkuUzkZ0PJw" Name="White Balance" Kind="InputPin" />
-            <Pin Id="MN57Zw1MwHrOe0lCe2oFTM" Name="Exposure Metering" Kind="InputPin" />
-            <Pin Id="LIgDwwFOajMO5A32J81RQR" Name="Apply All Settings" Kind="InputPin" />
-            <Pin Id="UybojCPFbSzLei0E5oq0RL" Name="Get All Settings" Kind="InputPin" />
-            <Pin Id="C6ugx5V2tT2LFjUav96wca" Name="Output" Kind="OutputPin" />
-            <Pin Id="JsMqY1MqiYdPnkwIKZectL" Name="Aperture" Kind="OutputPin" />
-            <Pin Id="QRdDveEQsFgPPFFmC42rS5" Name="ISO Number" Kind="OutputPin" />
-            <Pin Id="TWwdRCnJMacPZQWYdr4JQL" Name="Shutter Speed" Kind="OutputPin" />
-            <Pin Id="BXSanpZ3ulfPhLd8vK6z8D" Name="Mode" Kind="OutputPin" />
-            <Pin Id="QjpRGB7tmbANxmSrpg0Sfv" Name="Battery Level" Kind="OutputPin" />
-            <Pin Id="JukDvvThgh9L9kLDkms7d7" Name="Captured File Path" Kind="OutputPin" />
-            <Pin Id="Ahw8Q4mFeS9PESW3qzAwlr" Name="Display Name" Kind="OutputPin" />
-            <Pin Id="CAB1WfPALIgQPd6PhQRsMy" Name="Is Busy" Kind="OutputPin" />
+            <Pin Id="MD8ljc5hBUqLt1pIgDpmD1" Name="Display Name" Kind="OutputPin" />
+            <Pin Id="V6aOh084i1oLs4jiOMsiah" Name="Is Connected" Kind="OutputPin" />
           </Node>
-          <Pad Id="C7SWvgIKPAXOHG8KCUqKvW" Comment="Capture Photo" Bounds="411,609,41,45" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="Boolean" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Node Bounds="351,506,109,19" Id="FyZtIiXAfdZPXntDAxQSSr">
-            <p:NodeReference LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessNode" Name="LiveStream" />
-            </p:NodeReference>
-            <Pin Id="RudYQuJukJtMxzfol4bSCv" Name="Enable" Kind="InputPin" />
-            <Pin Id="B6hIGls64v3LyNdzSsLEWA" Name="ICamera" Kind="InputPin" />
-            <Pin Id="Gw3mSqAY0gzO902KlyOs8K" Name="Output" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="349,686,118,19" Id="ID8FSUAjBcUQcrdBV98IOL">
-            <p:NodeReference LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessNode" Name="TakePicture" />
-            </p:NodeReference>
-            <Pin Id="QmMtgcI7kx0L00O8mCfeQ8" Name="Input" Kind="InputPin" />
-            <Pin Id="DpegIKwgiIKOya7rLoUMak" Name="TakePicture" Kind="InputPin" />
-            <Pin Id="MCvjBHSeK18PnoWcelX2e8" Name="NoFocus" Kind="InputPin" />
-            <Pin Id="KyXod7oF7yFOKsQ2bLiQTP" Name="Transfer Progress" Kind="OutputPin" />
-          </Node>
-          <Pad Id="HWXt7tOfSScQVpR6WT0v0U" Comment="Is Busy" Bounds="544,398,40,20" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="ToqP4lbROtnMQ8TnJhrLLn" Comment="ISONumber" Bounds="366,155,40,15" ShowValueBox="true" isIOBox="true" Value="800">
-            <p:TypeAnnotation LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
-              <Choice Kind="TypeFlag" Name="ISONumber" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="Dx7tH2T1dLdOYTrgfZ82ao" Comment="ShutterSpeed" Bounds="396,181,43,15" ShowValueBox="true" isIOBox="true" Value="1/40">
-            <p:TypeAnnotation LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
-              <Choice Kind="TypeFlag" Name="ShutterSpeed" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="KneMQ3PobhHMjvA4EDc0UO" Comment="ExposureCompensation" Bounds="425,209,40,15" ShowValueBox="true" isIOBox="true" Value="0.0">
-            <p:TypeAnnotation LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
-              <Choice Kind="TypeFlag" Name="ExposureCompensation" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="UNP8np78nuUPLvTn2lc3Hl" Comment="WhiteBalance" Bounds="455,241,44,15" ShowValueBox="true" isIOBox="true" Value="Flash">
-            <p:TypeAnnotation LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
-              <Choice Kind="TypeFlag" Name="WhiteBalance" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Node Bounds="832,579,74,19" Id="VVZBMcACP6XPTc4xd6jWEl">
-            <p:NodeReference LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessNode" Name="AutoFocus" />
-            </p:NodeReference>
-            <Pin Id="JDNLXtaFJIjLK8yJ9EzIX2" Name="Input" Kind="InputPin" />
-            <Pin Id="CHFvC86GiHfLsz83nQt52h" Name="Apply" Kind="InputPin" />
-            <Pin Id="VvqgJAFDv6AO0XFxlqD3zS" Name="Output" Kind="OutputPin" />
-            <Pin Id="IUU5U7eWiWdNHP2hPNbvvN" Name="Force Stop" Kind="InputPin" />
-          </Node>
-          <Node Bounds="305,888,85,19" Id="OWKYFUjjGzFMAfgO6MUFrq">
-            <p:NodeReference LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessNode" Name="FileSettings" />
-            </p:NodeReference>
-            <Pin Id="GbdWWxIN0xaMXOl1IDJtZq" Name="Camera" Kind="InputPin" />
-            <Pin Id="BqXFufNHxogNoKWaUgm8Yd" Name="Compresion Settings" Kind="InputPin" />
-            <Pin Id="EdoiwCbIcGsQTRSJSSb3ID" Name="Directory" Kind="InputPin" />
-            <Pin Id="PVxe31gOX6zPfItxfkwX8z" Name="Save to Camera" Kind="InputPin" />
-            <Pin Id="E7rNuVmiwLuQYFXuvxihFP" Name="Save to Computer" Kind="InputPin" />
-            <Pin Id="AFmMOvRVlLHLQA4uV68aQw" Name="Output" Kind="OutputPin" />
-          </Node>
-          <Pad Id="BPi8j60vWCtOkdr3bdR4ko" Comment="CompresionSettings" Bounds="329,776,209,15" ShowValueBox="true" isIOBox="true" Value="1280x720, 30 fps (30 max fps), 24 bpp">
-            <p:TypeAnnotation LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
-              <Choice Kind="TypeFlag" Name="CompressionSetting" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="OsVdj3UpSfmMMCYnW9CXor" Comment="Devices" Bounds="307,105,690,15" ShowValueBox="true" isIOBox="true" Value="Canon EOS 550D (631207624)">
-            <p:TypeAnnotation LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
-              <Choice Kind="TypeFlag" Name="CameraDevice" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Node Bounds="838,449,85,19" Id="P6xgM2CPpTfOkQYfLi8ofy">
-            <p:NodeReference LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessNode" Name="BulbMode" />
-            </p:NodeReference>
-            <Pin Id="KkNSKbdIKzYOVvnpD6HoUV" Name="Camera" Kind="InputPin" />
-            <Pin Id="G8qiacFgd32LCQzTrSSAWx" Name="Press and Hold" Kind="InputPin" />
-            <Pin Id="QN2L3B4l89XPfeZ9oZ836X" Name="ForceStop" Kind="InputPin" />
-          </Node>
-          <Pad Id="OtybXSnRo4sQbXUqeMe0tA" Comment="Save to Camera" Bounds="367,822,40,19" ShowValueBox="true" isIOBox="true" Value="True">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="Boolean" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="APtMsHCYfeHNWl1sH9CFY0" Comment="Force Stop" Bounds="922,423,40,19" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="Boolean" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="KW3YoP4sAxjM3Mx3on23DI" Bounds="98,854,180,96" ShowValueBox="true" isIOBox="true" Value="If there is no SDCard in your Camera you must set the capture to SDRam in order to download it to the computer">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="String" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:fontsize p:Type="Int32">9</p:fontsize>
-              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="Nk8Pw8IBCLYLPZIENkopE1" Comment="Save to Directory" Bounds="388,854,40,19" ShowValueBox="true" isIOBox="true" Value="True">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="Boolean" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="R2DfDdnIiH8MB5NpDERSwa" Bounds="1051,405,152,44" ShowValueBox="true" isIOBox="true" Value="Also used for 'Continuous Shooting'">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="String" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:fontsize p:Type="Int32">9</p:fontsize>
-              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="LNQZIfLGVUDPBjZwGDiimS" Comment="NoFocusMode" Bounds="464,664,40,19" ShowValueBox="true" isIOBox="true" Value="True">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="Boolean" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="Avx8YbyCgQ2OlDqUc5HCnY" Comment="Apply All Settings" Bounds="514,334,40,19" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="Boolean" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="FnlaomOwkQ9NWi1XX1BO4m" Comment="Aperture" Bounds="337,131,40,15" ShowValueBox="true" isIOBox="true" Value="5.6">
-            <p:TypeAnnotation LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
-              <Choice Kind="TypeFlag" Name="Aperture" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="DTMCEUK2C9QPyihFUwW85t" Comment="Exposure Metering" Bounds="485,273,84,15" ShowValueBox="true" isIOBox="true" Value="Spot metering">
-            <p:TypeAnnotation LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
-              <Choice Kind="TypeFlag" Name="ExposureMeteringMode" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Node Bounds="53,193,101,19" Id="AQSYs1cNJ7jMW9hNBxqz02">
-            <p:NodeReference LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessNode" Name="CameraManager" />
-            </p:NodeReference>
-            <Pin Id="I5pfMlCe9eHQdPw7UmS6jX" Name="Connect" Kind="ApplyPin" />
-            <Pin Id="PwPE8IPx7MJO5t32KlENmc" Name="Display Names" Kind="OutputPin" />
-            <Pin Id="CxZz8Q7m7BdNSs7LaB2UoV" Name="Connected" Kind="OutputPin" />
-          </Node>
-          <Pad Id="KxmGT5VNIS9N4fR53Lj4kI" Comment="Force Stop" Bounds="956,552,40,19" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="Boolean" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="GJNOgVGyziSOXm8DDg7rpy" Comment="Transfer Progress" Bounds="832,741,40,19" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="830,703,67,19" Id="TCElwUZbbRAQT7sdFvraGZ">
-            <p:NodeReference LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessNode" Name="Recorder" />
-            </p:NodeReference>
-            <Pin Id="GhfVlVDZIbUPRVuk3u7JOT" Name="Input" Kind="InputPin" />
-            <Pin Id="ItluOsYa3DAOfNIFY80Tc8" Name="Enable" Kind="InputPin" />
-            <Pin Id="JhEI24si22sLUKwJ0v9QKm" Name="Transfer Progress" Kind="OutputPin" />
-          </Node>
-          <Pad Id="OeZpZIj6DAUNXm0lM7f3uQ" Comment="Get All Settings" Bounds="677,347,40,19" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="Boolean" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="Gl9h6Sj2LHqN2aorl7jQUS" Comment="Focus" Bounds="869,507,41,45" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="Boolean" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="Uds2eko9qhIMow7eFIfgi3" Comment="Press and Hold" Bounds="880,370,41,45" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="Boolean" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Press</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="M0KK84TxFGfPPyYnASoGDL" Comment="Enable" Bounds="366,454,41,45" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="Boolean" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="Dv35O4jDgPRO8UVTasnLzF" Comment="Enable" Bounds="894,640,41,45" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="Boolean" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="Mu3AZGHEnT8Pqs3s8yXeAN" Comment="Display Name" Bounds="515,435,251,36" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="FYllZoZwAapN9PpRLDbhGy" Comment="Transfer Progress" Bounds="351,730,35,15" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="UbgmSTavcOuLtBT6QEW0Wj" Comment="Display Names" Bounds="55,285,131,30" ShowValueBox="true" isIOBox="true">
+          <Pad Id="VJdB2a139xbNX6w1F0arJS" Comment="Display Name" Bounds="61,118,172,34" ShowValueBox="true" isIOBox="true">
             <p:Value>
               <Item></Item>
             </p:Value>
           </Pad>
-          <Pad Id="L02NlpKuoknLgXoBuVQMab" Comment="Connected" Bounds="151,237,35,34" ShowValueBox="true" isIOBox="true" Value="False" />
-          <Pad Id="U38ipS4a7C2Lenxv13rUQ4" Comment="Directory" Bounds="347,798,177,15" ShowValueBox="true" isIOBox="true" Value="..\">
+          <Pad Id="MKlCaOD4w7GNKlsjG32sDH" Comment="Is Connected" Bounds="315,118,39,34" ShowValueBox="true" isIOBox="true" Value="False" />
+          <Node Bounds="237,480,225,19" Id="LlXXGmwK4vcOpCyfcQdnZN">
+            <p:NodeReference LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Camera" />
+            </p:NodeReference>
+            <Pin Id="EZ3BmiV5hB6N4026AhoSbm" Name="Device" Kind="InputPin" />
+            <Pin Id="LkC7UoiqZfKQRap4v5cK7j" Name="Aperture" Kind="InputPin" />
+            <Pin Id="NwvnEQNk3NaPXI4x0KHvAs" Name="ISO Number" Kind="InputPin" />
+            <Pin Id="K7DuT5Y05L1MpldtAhWDLX" Name="Shutter Speed" Kind="InputPin" />
+            <Pin Id="B8Fx0iqvkmbOMJLdhah31B" Name="Exposure Compensation" Kind="InputPin" />
+            <Pin Id="D9Tdfl90uwnQV69J7HPQq5" Name="White Balance" Kind="InputPin" />
+            <Pin Id="NfZfJUxxJNyPGmU8IZINVT" Name="Exposure Metering" Kind="InputPin" />
+            <Pin Id="KkZhshmozlAQFPYr00HHcK" Name="Apply All Settings" Kind="InputPin" />
+            <Pin Id="S7jILMkrn3vPSyS00EsHtb" Name="Get All Settings" Kind="InputPin" />
+            <Pin Id="HVnUG2Emh1fMTEKyNi1dkN" Name="Capture Folder" Kind="InputPin" />
+            <Pin Id="BkWU0oZCs2FPKBtacnGjmJ" Name="Enable LiveView" Kind="InputPin" />
+            <Pin Id="RcCst9oluS9NpL1mS1ADWN" Name="Transfer Files to PC" Kind="InputPin" />
+            <Pin Id="Ok0RDcHXUGOO5oPwLA3UIL" Name="Output" Kind="OutputPin" />
+            <Pin Id="FXk5Xw5IqU8OiVQXT8idHt" Name="Aperture" Kind="OutputPin" />
+            <Pin Id="GIKjxnlFNMpPkcVb7GZ4hX" Name="ISO Number" Kind="OutputPin" />
+            <Pin Id="TdIA1CP0QoAOfRxdYGw034" Name="Shutter Speed" Kind="OutputPin" />
+            <Pin Id="BjYkeNbGWbLMLGT8KonjmK" Name="Mode" Kind="OutputPin" />
+            <Pin Id="E5GBkzJklNCLgv0dQy0nD4" Name="Battery Level" Kind="OutputPin" />
+            <Pin Id="Fvrtk1Z69oKPPz7W58mTXw" Name="Display Name" Kind="OutputPin" />
+            <Pin Id="STFklGkcKh8L4dZYg5GxVy" Name="Is Busy" Kind="OutputPin" />
+            <Pin Id="GtQvf5eZRLnOgEIknTfJ1a" Name="LiveView Image" Kind="OutputPin" />
+            <Pin Id="OXwZnJYRS9cL8e57H0uXMj" Name="On File Transferred" Kind="OutputPin" />
+            <Pin Id="Ng50oeC7BTaM5MUqrkw9Qb" Name="Transfer Progress" Kind="OutputPin" />
+            <Pin Id="MEQE24qjUH3PAreIThoJXR" Name="Exposure Status" Kind="OutputPin" />
+          </Node>
+          <Pad Id="LXa3PPXwoaPPNwtuhxcVWo" Comment="Get All Settings" Bounds="361,392,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="IOexFfOYHlwN76uxLQwDTr" Comment="Device" Bounds="239,192,168,15" ShowValueBox="true" isIOBox="true" Value="Canon EOS 550D (631207624)">
+            <p:TypeAnnotation LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
+              <Choice Kind="TypeFlag" Name="CameraDevice" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="L00O9TaXB3qQQqutIdXv5z" Comment="Aperture" Bounds="264,227,49,15" ShowValueBox="true" isIOBox="true" Value="4.0">
+            <p:TypeAnnotation LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
+              <Choice Kind="TypeFlag" Name="Aperture" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="Vl2nbThxNG5QKcrTk30dAC" Comment="ISO Number" Bounds="264,246,58,15" ShowValueBox="true" isIOBox="true" Value="Auto">
+            <p:TypeAnnotation LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
+              <Choice Kind="TypeFlag" Name="ISONumber" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="K1nWD4SkochOVUw8MK7Znu" Comment="Shutter Speed" Bounds="264,265,63,15" ShowValueBox="true" isIOBox="true" Value="Bulb">
+            <p:TypeAnnotation LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
+              <Choice Kind="TypeFlag" Name="ShutterSpeed" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="Rrd03frnbShMEnO8cup0Qp" Comment="Exposure Compensation" Bounds="264,283,61,15" ShowValueBox="true" isIOBox="true" Value="+1">
+            <p:TypeAnnotation LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
+              <Choice Kind="TypeFlag" Name="ExposureCompensation" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="UWU8bH4qBZfL0om6zQSeHo" Comment="White Balance" Bounds="264,301,81,15" ShowValueBox="true" isIOBox="true" Value="Auto">
+            <p:TypeAnnotation LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
+              <Choice Kind="TypeFlag" Name="WhiteBalance" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="Lmpugfox3mlMnxSILJgUSy" Comment="Exposure Metering" Bounds="264,319,196,15" ShowValueBox="true" isIOBox="true" Value="Spot metering">
+            <p:TypeAnnotation LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
+              <Choice Kind="TypeFlag" Name="ExposureMeteringMode" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="GBTgENblb5rMlDMrM2vS8N" Comment="Is Busy" Bounds="379,519,35,15" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="489,531,65,19" Id="TnzrIlu0iGxK92megJGzcw">
+            <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="HoldLatest" />
+            </p:NodeReference>
+            <Pin Id="NqJJii9EtEzPCq7BnAj4BF" Name="Async Notifications" Kind="InputPin" />
+            <Pin Id="Gm8ddbuaOXSNBKiv9uUlbp" Name="Reset" Kind="InputPin" />
+            <Pin Id="SrzyreXtqfXNzo0prhGYoJ" Name="Value" Kind="OutputPin" />
+            <Pin Id="T8zdD35aFQ7N2cBGUDudVb" Name="On Data" Kind="OutputPin" />
+          </Node>
+          <Pad Id="HC1AX3BR8tROdjuRre3tG9" Comment="Last Captured File" Bounds="491,578,176,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="EEdSdC0tZU6OhoDkMRhJiz" Bounds="480,55,128,19" ShowValueBox="true" isIOBox="true" Value="Supported cameras:">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="T2Mhs64QNsqOyDZiDHORIw" Bounds="479,77,252,19" ShowValueBox="true" isIOBox="true" Value="http://www.digicamcontrol.com/cameras">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="BCVQIhCVi7jNB7h67bRUOE" Comment="Capture Folder" Bounds="419,451,163,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\..\..\..\temp\\">
             <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="BlMxLlTUjW4PqRbYr6XXtm" Comment="Captured File Path" Bounds="485,481,190,17" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="H3oQNADM6uqM46akKUPAwA" Comment="Apply All Settings" Bounds="337,353,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="EFcHetUFYvPOXyzEpzz3Ls" Comment="Live View" Bounds="418,729,190,132" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="HpSuMNFngRuNNMB5ZsK5X3" Comment="Transfer Progress" Bounds="568,538,35,15" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="237,721,85,26" Id="OOoPo3xcbEbPTZLrgnmmKf">
+            <p:NodeReference LastCategoryFullName="Devices.DigiCamControl.Camera" LastSymbolSource="VL.Devices.DigiCamControl.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="CapturePhoto" />
+            </p:NodeReference>
+            <Pin Id="PsZopmLNQ2lNLsJITVYhLp" Name="Input" Kind="StateInputPin" />
+            <Pin Id="UbvY70psieGN3teb1n6dDt" Name="Save to SD card" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="JyC3BsCI7yfK9lWwiBAZlU" Name="Compression" Kind="InputPin" />
+            <Pin Id="F1gbEKsZmjAPAvw6WVZVzO" Name="Auto Focus" Kind="InputPin" />
+            <Pin Id="PaUtNxRBSqnP4I36IF6xRr" Name="Apply" Kind="InputPin" />
+            <Pin Id="Svt0LwM8TSHPBlE31nNmMI" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Pad Id="CmyrPzy2krCOGkj5G2jp8c" Comment="Enable LiveView" Bounds="502,392,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="237,796,74,26" Id="SYY8Z1Y2VvdOet53jlDzg5">
+            <p:NodeReference LastCategoryFullName="Devices.DigiCamControl.Camera" LastSymbolSource="VL.Devices.DigiCamControl.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="RecordMovie" />
+            </p:NodeReference>
+            <Pin Id="Ndpo0za7meKOjOwg4UcO8O" Name="Input" Kind="StateInputPin" />
+            <Pin Id="TVr3RRfu6NXQFCpQIYQTzC" Name="Apply" Kind="InputPin" />
+            <Pin Id="NARSDmO55R1LbIL7EGAIOn" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Pad Id="KUIqsCPLSsFMvf7jxHXS7Q" Comment="Apply" Bounds="325,679,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="NyMYYVM3N4hNjZWSxp2VxC" Comment="Apply" Bounds="325,762,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="237,867,64,26" Id="IMBIDR2ts9yP0ZXujEba9o">
+            <p:NodeReference LastCategoryFullName="Devices.DigiCamControl.Camera" LastSymbolSource="VL.Devices.DigiCamControl.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="AutoFocus" />
+            </p:NodeReference>
+            <Pin Id="KbM6tSdSmKAMRZm7fQnTm4" Name="Input" Kind="StateInputPin" />
+            <Pin Id="VuE7UzkS1O6LIMvwxCTch1" Name="Apply" Kind="InputPin" />
+            <Pin Id="VFEjYo69drxO8T5WrcwrT8" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Pad Id="NDGx7Gh2FqrN12jwuSbUod" Comment="Apply" Bounds="325,836,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="SwYYilqpEtSNSQ3r0XIBBu" Comment="Save to SD card" Bounds="259,546,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="T9ABIDFBTW8L7dfeHQqm0X" Comment="Compression" Bounds="279,593,132,15" ShowValueBox="true" isIOBox="true" Value="Large Fine JPEG">
+            <p:TypeAnnotation LastCategoryFullName="Devices.DigiCamControl" LastSymbolSource="VL.Devices.DigiCamControl.vl">
+              <Choice Kind="TypeFlag" Name="CompressionSetting" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="LuPMztlq9VfNzkkD8FIqyT" Comment="Auto Focus" Bounds="299,621,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="K7HbIMLnoySMly3gpiuw8Q" Bounds="80,548,147,130" ShowValueBox="true" isIOBox="true" Value="When there is no SD card in the camera, &quot;Save to SD card&quot; needs to be off, in order for the image to be transferrable to the PC.">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Th8OJkCMrt6MP3HFMDkP2P" Bounds="590,228,239,98" ShowValueBox="true" isIOBox="true" Value="In case you have multiple cameras attached at the same time, the enums contain all possible entries for all cameras and you'll have to know which camera supports which entries!">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="TfjZ8tDoTJEMLmU21CAfS2" Bounds="590,197,245,31" ShowValueBox="true" isIOBox="true" Value="Multiple Device Control">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">15</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="PXtMJ3dYtloOdfMnGynVJy" Bounds="62,807,161,75" ShowValueBox="true" isIOBox="true" Value="Seems to only work when you enable LiveView manually before starting the recording.">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
-        <Patch Id="IcF8jXk7aCbOWeVpPXkXjR" Name="Create" />
-        <Patch Id="JwQ4MoMkEjlQJ1D6iBjqeO" Name="Update" />
-        <ProcessDefinition Id="ReWkqAYAnnzPuOC7B1L49W">
-          <Fragment Id="D3zvwm5yucPLGZrMtV9yFF" Patch="IcF8jXk7aCbOWeVpPXkXjR" Enabled="true" />
-          <Fragment Id="SS7x185hSRSPFBbRdorhUt" Patch="JwQ4MoMkEjlQJ1D6iBjqeO" Enabled="true" />
+        <Patch Id="JiFp4FwrQe0QICMOjZlPy6" Name="Create" />
+        <Patch Id="MfZVTEc0Z59OFFLnUgjeoQ" Name="Update" />
+        <ProcessDefinition Id="Dwr34ISqQThMeuVl9LQobl">
+          <Fragment Id="CCXVDvjNWHONAs6uVbRrTl" Patch="JiFp4FwrQe0QICMOjZlPy6" Enabled="true" />
+          <Fragment Id="Uqxy8wAc62kMOwKByDQwty" Patch="MfZVTEc0Z59OFFLnUgjeoQ" Enabled="true" />
         </ProcessDefinition>
-        <Link Id="L5r7Jfg5NELPaCLou6r2Rs" Ids="C7SWvgIKPAXOHG8KCUqKvW,DpegIKwgiIKOya7rLoUMak" />
-        <Link Id="RVCGqNniaGqP9L7GmtF0hc" Ids="CAB1WfPALIgQPd6PhQRsMy,HWXt7tOfSScQVpR6WT0v0U" />
-        <Link Id="RmlWJXsNmIAOf7Mef0RWhp" Ids="C6ugx5V2tT2LFjUav96wca,GbdWWxIN0xaMXOl1IDJtZq" />
-        <Link Id="SFVarM9nywGNtMINZVZOfO" Ids="OtybXSnRo4sQbXUqeMe0tA,PVxe31gOX6zPfItxfkwX8z" />
-        <Link Id="ThPKnO7iXqjPXThplu24WL" Ids="APtMsHCYfeHNWl1sH9CFY0,QN2L3B4l89XPfeZ9oZ836X" />
-        <Link Id="DV5RlZEiBSfN4h8cUW9B3s" Ids="Nk8Pw8IBCLYLPZIENkopE1,E7rNuVmiwLuQYFXuvxihFP" />
-        <Link Id="LcYEJtdqrnLOToN7oVYCtt" Ids="LNQZIfLGVUDPBjZwGDiimS,MCvjBHSeK18PnoWcelX2e8" />
-        <Link Id="E7d51neifpuLLLWFIzJZfK" Ids="Avx8YbyCgQ2OlDqUc5HCnY,LIgDwwFOajMO5A32J81RQR" />
-        <Link Id="Gr2rLYWLUfnMC4Aep80U0H" Ids="BPi8j60vWCtOkdr3bdR4ko,BqXFufNHxogNoKWaUgm8Yd" />
-        <Link Id="KXuMPsJsVSqOulHrkvuqdB" Ids="FnlaomOwkQ9NWi1XX1BO4m,QicRH1TLSGWNRHC4U4zaUJ" />
-        <Link Id="P4qwaF2qKExNImwoZVj2x5" Ids="ToqP4lbROtnMQ8TnJhrLLn,TyRSD3t4MyOLvlSgGi3ZcI" />
-        <Link Id="VR8k4AoLiz7LIH0Xuak8nR" Ids="Dx7tH2T1dLdOYTrgfZ82ao,C33JmR2QAnXMWpOMndlbL1" />
-        <Link Id="RDYezJiD2HXOxkwYXhFhHN" Ids="KneMQ3PobhHMjvA4EDc0UO,Jhgtu4msR1nMRpz9ulNBk9" />
-        <Link Id="UZqhKmJ0QcJOIil6TV4lOn" Ids="UNP8np78nuUPLvTn2lc3Hl,SZsdB6WiAzbNkuUzkZ0PJw" />
-        <Link Id="LFXG7Kg2jtLNQuAVaYemxs" Ids="DTMCEUK2C9QPyihFUwW85t,MN57Zw1MwHrOe0lCe2oFTM" />
-        <Link Id="SVToxIS7rQxNIlFdKnlRES" Ids="C6ugx5V2tT2LFjUav96wca,KkNSKbdIKzYOVvnpD6HoUV" />
-        <Link Id="HVvoGwggLTAN7bHMiaIytB" Ids="C6ugx5V2tT2LFjUav96wca,JDNLXtaFJIjLK8yJ9EzIX2" />
-        <Link Id="CdS93BrMdBlLkmPGeR7hoc" Ids="C6ugx5V2tT2LFjUav96wca,B6hIGls64v3LyNdzSsLEWA" />
-        <Link Id="ATAgOSCG42mNZJr97JrPfX" Ids="KxmGT5VNIS9N4fR53Lj4kI,IUU5U7eWiWdNHP2hPNbvvN" />
-        <Link Id="TV5RBBNvEFCPFMA8lKSXDl" Ids="C6ugx5V2tT2LFjUav96wca,GhfVlVDZIbUPRVuk3u7JOT" />
-        <Link Id="LUTfEncxub1QTxwXjDepDL" Ids="C6ugx5V2tT2LFjUav96wca,QmMtgcI7kx0L00O8mCfeQ8" />
-        <Link Id="ML14VK2xTAhNT38arxpl1b" Ids="JhEI24si22sLUKwJ0v9QKm,GJNOgVGyziSOXm8DDg7rpy" />
-        <Link Id="KJPFEP1b0R8NMK0qg3iXDz" Ids="OsVdj3UpSfmMMCYnW9CXor,NYVXbMz2C90QQcJjCJuV3k" />
-        <Link Id="PZ9hRgFKltSL0YZAQZ9EKg" Ids="OeZpZIj6DAUNXm0lM7f3uQ,UybojCPFbSzLei0E5oq0RL" />
-        <Link Id="CbAHqFi3ZptMAfBueRQ4is" Ids="Gl9h6Sj2LHqN2aorl7jQUS,CHFvC86GiHfLsz83nQt52h" />
-        <Link Id="EaIKNGN89ceNZjDIJPRHRh" Ids="Uds2eko9qhIMow7eFIfgi3,G8qiacFgd32LCQzTrSSAWx" />
-        <Link Id="IgLsaPhGSSqMB8xsfxytrl" Ids="M0KK84TxFGfPPyYnASoGDL,RudYQuJukJtMxzfol4bSCv" />
-        <Link Id="GH6Uvrny8MpM8vklfoTKj1" Ids="Dv35O4jDgPRO8UVTasnLzF,ItluOsYa3DAOfNIFY80Tc8" />
-        <Link Id="FSdKwXGNKIZPGVIhbNmABo" Ids="Ahw8Q4mFeS9PESW3qzAwlr,Mu3AZGHEnT8Pqs3s8yXeAN" />
-        <Link Id="SZQcMJNTElvMfTrvltX7lO" Ids="KyXod7oF7yFOKsQ2bLiQTP,FYllZoZwAapN9PpRLDbhGy" />
-        <Link Id="CQBfiKyhl5UOKQzQRvIdil" Ids="PwPE8IPx7MJO5t32KlENmc,UbgmSTavcOuLtBT6QEW0Wj" />
-        <Link Id="MzkQdQcFl9dOSCh4idN7aE" Ids="CxZz8Q7m7BdNSs7LaB2UoV,L02NlpKuoknLgXoBuVQMab" />
-        <Link Id="PmfAVeRNsrBLFXlB5cr11i" Ids="U38ipS4a7C2Lenxv13rUQ4,EdoiwCbIcGsQTRSJSSb3ID" />
-        <Link Id="P7bSjpZF9yvO3AIc0lHp2q" Ids="JukDvvThgh9L9kLDkms7d7,BlMxLlTUjW4PqRbYr6XXtm" />
+        <Link Id="RTenwR1tLX9LSDmjnJ5LVW" Ids="MD8ljc5hBUqLt1pIgDpmD1,VJdB2a139xbNX6w1F0arJS" />
+        <Link Id="UeamWanAXmBOqkN3IuTbXh" Ids="V6aOh084i1oLs4jiOMsiah,MKlCaOD4w7GNKlsjG32sDH" />
+        <Link Id="BYM36ZJ5QBeLoS67HmtV4Q" Ids="LXa3PPXwoaPPNwtuhxcVWo,S7jILMkrn3vPSyS00EsHtb" />
+        <Link Id="UFAeLgfX57oOSZhvRwIzfp" Ids="IOexFfOYHlwN76uxLQwDTr,EZ3BmiV5hB6N4026AhoSbm" />
+        <Link Id="I3f20xIKNIVQCRvn3nnBcY" Ids="L00O9TaXB3qQQqutIdXv5z,LkC7UoiqZfKQRap4v5cK7j" />
+        <Link Id="HkUoaKK1VC7M0ffmGU2V6L" Ids="Vl2nbThxNG5QKcrTk30dAC,NwvnEQNk3NaPXI4x0KHvAs" />
+        <Link Id="Jw2ALSm76mcQcTOM6tl1xa" Ids="K1nWD4SkochOVUw8MK7Znu,K7DuT5Y05L1MpldtAhWDLX" />
+        <Link Id="MtT0YXHT2KEPGu4qfk1a5y" Ids="Rrd03frnbShMEnO8cup0Qp,B8Fx0iqvkmbOMJLdhah31B" />
+        <Link Id="Cj7HAoQUw4YPZtv973p9Q4" Ids="Lmpugfox3mlMnxSILJgUSy,NfZfJUxxJNyPGmU8IZINVT" />
+        <Link Id="PYfUkZ1PHezMYrdYtNzOcg" Ids="STFklGkcKh8L4dZYg5GxVy,GBTgENblb5rMlDMrM2vS8N" />
+        <Link Id="LMiHi3XWXxuO4daygEFhB3" Ids="UWU8bH4qBZfL0om6zQSeHo,D9Tdfl90uwnQV69J7HPQq5" />
+        <Link Id="E6ac1WLvWJKNIDIQSHMR3a" Ids="SrzyreXtqfXNzo0prhGYoJ,HC1AX3BR8tROdjuRre3tG9" />
+        <Link Id="AhlpMZyrXHZLiQTHQJFNmr" Ids="OXwZnJYRS9cL8e57H0uXMj,NqJJii9EtEzPCq7BnAj4BF" />
+        <Link Id="UYYqTn0XarVNtzPhpNDPFj" Ids="BCVQIhCVi7jNB7h67bRUOE,HVnUG2Emh1fMTEKyNi1dkN" />
+        <Link Id="QlWpqZlOSqaOtIpyJ2ShGG" Ids="H3oQNADM6uqM46akKUPAwA,KkZhshmozlAQFPYr00HHcK" />
+        <Link Id="SPRYPzue2dhLPI5pakj5UJ" Ids="GtQvf5eZRLnOgEIknTfJ1a,EFcHetUFYvPOXyzEpzz3Ls" />
+        <Link Id="EtdTGGqFmUZNiNAoElysO0" Ids="Ng50oeC7BTaM5MUqrkw9Qb,HpSuMNFngRuNNMB5ZsK5X3" />
+        <Link Id="QlEz0C3shKLMiWHgFocA6g" Ids="Ok0RDcHXUGOO5oPwLA3UIL,PsZopmLNQ2lNLsJITVYhLp" />
+        <Link Id="J14oyMyVWvcLHNte9Gdk2n" Ids="CmyrPzy2krCOGkj5G2jp8c,BkWU0oZCs2FPKBtacnGjmJ" />
+        <Link Id="G6MZW4f8qjYNgr39acGQ9U" Ids="Svt0LwM8TSHPBlE31nNmMI,Ndpo0za7meKOjOwg4UcO8O" />
+        <Link Id="FTEH5BRThPLMBhBOccEjyJ" Ids="KUIqsCPLSsFMvf7jxHXS7Q,PaUtNxRBSqnP4I36IF6xRr" />
+        <Link Id="EVRsFp6NwZaP95nZqhTJlB" Ids="NyMYYVM3N4hNjZWSxp2VxC,TVr3RRfu6NXQFCpQIYQTzC" />
+        <Link Id="E415NN9IVynP4quaCCabwJ" Ids="NARSDmO55R1LbIL7EGAIOn,KbM6tSdSmKAMRZm7fQnTm4" />
+        <Link Id="G4QBplgjzOOOaljUHQ5tHR" Ids="NDGx7Gh2FqrN12jwuSbUod,VuE7UzkS1O6LIMvwxCTch1" />
+        <Link Id="DS2SLOSSNzoLKKAqKLh79X" Ids="SwYYilqpEtSNSQ3r0XIBBu,UbvY70psieGN3teb1n6dDt" />
+        <Link Id="KP34nfLnFT7L4RC5oDhWFr" Ids="T9ABIDFBTW8L7dfeHQqm0X,JyC3BsCI7yfK9lWwiBAZlU" />
+        <Link Id="UNwUPWi97M0NxcTCVfMJR2" Ids="LuPMztlq9VfNzkkD8FIqyT,F1gbEKsZmjAPAvw6WVZVzO" />
       </Patch>
     </Node>
   </Patch>
+  <NugetDependency Id="B6ppVzvF8NDNXb3MFHtGvR" Location="VL.CoreLib" Version="2021.4.10" />
+  <NugetDependency Id="R2FTqxs77KmQCqrXWgrfh1" Location="VL.Devices.DigiCamControl" Version="0.0.0.0" />
 </Document>

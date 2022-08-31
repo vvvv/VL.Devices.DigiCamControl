@@ -275,6 +275,23 @@
             <param name="capabilityEnum">The capability enum.</param>
             <returns><c>true</c> if capability supported</returns>
         </member>
+        <member name="P:CameraControl.Devices.ICameraDevice.TransferProgress">
+            <summary>
+            The current file transfer progress (0-100 %)
+            </summary>
+            <value>
+            The transfer progress.
+            </value>
+        </member>
+        <member name="M:CameraControl.Devices.ICameraDevice.GetProhibitionCondition(CameraControl.Devices.Classes.OperationEnum)">
+            <summary>
+            Gets the prohibition condition for the specified operation.
+            If a operation can be executed empty string will returned,
+            Else the error code or error description 
+            </summary>
+            <param name="operationEnum">The operation enum.</param>
+            <returns></returns>
+        </member>
         <member name="M:CameraControl.Devices.ICameraDevice.EndBulbMode">
             <summary>
             Support only if capability Bulb is specified
@@ -284,6 +301,12 @@
             <summary>
             Support only if capability Bulb is specified
             </summary>
+        </member>
+        <member name="M:CameraControl.Devices.ICameraDevice.ReleaseResurce(System.Object)">
+            <summary>
+            Should be called after file tranferred 
+            </summary>
+            <param name="o">The o.</param>
         </member>
         <member name="E:CameraControl.Devices.ICameraDevice.PhotoCaptured">
             <summary>

@@ -257,6 +257,11 @@
             	<c>true</c> if this instance is selected; otherwise, <c>false</c>.
             </value>
         </member>
+        <member name="P:Canon.Eos.Framework.EosLiveImage.Histogram">
+            <summary>
+            TODO:
+            </summary>
+        </member>
         <member name="P:Canon.Eos.Framework.EosImageQuality.PrimaryImageSize">
             <summary>
             Gets or sets the size of the primary image.

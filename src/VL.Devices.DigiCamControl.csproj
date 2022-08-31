@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="VL.Core" Version="2020.2.1" ExcludeAssets="runtime" />
+    <PackageReference Include="VL.Core" Version="2021.4.10" ExcludeAssets="runtime" />
   </ItemGroup>
 
 </Project>
