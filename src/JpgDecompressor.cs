@@ -8,8 +8,10 @@ namespace DigiCamControl
 {
     public static class JpgDecompressor
     {
-        public static byte[] DecompressJpeg(ArraySegment<byte> jpgEncodedBytes)
+        public static byte[] DecompressJpeg(ArraySegment<byte> jpgEncodedBytes, out int width, out int height)
         {
+            width = 0;
+            height = 0;
             if (jpgEncodedBytes.Count > 4)
             {
                 using (MemoryStream inStream = new MemoryStream(jpgEncodedBytes.Array))
@@ -31,11 +33,14 @@ namespace DigiCamControl
 
                         bmp.UnlockBits(data);
 
+                        width = rect.Width;
+                        height = rect.Height;
                         return result;
                     }
                 } 
             }
-            return new byte[0];
+            else
+                return new byte[0];
         }
     }
 } 
