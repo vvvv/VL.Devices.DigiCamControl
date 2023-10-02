@@ -1,5 +1,6 @@
 # VL.Devices.DigiCamControl
-A set of [VL](https://vvvv.org/documentation/vl) nodes for remo controlling DSLR cameras based on [digiCamControl](https://github.com/dukus/digiCamControl).
+A package for remote controlling DSLR cameras in VL.  
+Based on [digiCamControl](https://github.com/dukus/digiCamControl).
 
 Try it with vvvv, the visual live-programming environment for .NET  
 Download: http://visualprogramming.net
